@@ -3,8 +3,7 @@
  */
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #555;
+  padding-top: 50px; 
 }
 
 h1, .h1,
@@ -163,4 +162,8 @@ h6, .h6 {
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
+}
+
+.topnav-border{
+   border-bottom: 2px solid #022a50;
 }
