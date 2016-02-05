@@ -167,3 +167,10 @@ h6, .h6 {
 .topnav-border{
    border-bottom: 2px solid #022a50;
 }
+
+.affix {
+    top:52px;
+    position:fixed;
+   background: #FFFFFF;
+    width: 100%;
+}
