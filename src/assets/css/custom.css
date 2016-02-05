@@ -174,3 +174,18 @@ h6, .h6 {
    background: #FFFFFF;
     width: 100%;
 }
+
+.menuHeadText {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #999;
+  white-space: nowrap;
+  padding-left: 10px;
+}
+.navbar>.container .navbar-brand, .navbar>.container-fluid {
+    text-shadow: 2px 2px 7px #000000;
+    font-size: 20px;
+}
