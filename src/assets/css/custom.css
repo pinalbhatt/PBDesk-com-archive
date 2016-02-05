@@ -78,8 +78,7 @@ h6, .h6 {
  */
 
 .blog-header {
-  padding-top: 20px;
-  padding-bottom: 20px;
+
 }
 .blog-title {
   margin-top: 30px;
@@ -190,3 +189,91 @@ h6, .h6 {
     text-shadow: 2px 2px 7px #000000;
     font-size: 20px;
 }
+
+.foot{
+    background:#1995dc;
+}
+
+.foot a, .foot a:visited{
+    color:#c2e5ff;
+}
+
+.foot a:hover{
+    color:#c2e5ff;
+}
+.foot h3 {
+color: #fff;
+font-size: 18px;
+margin: 5px 0;
+padding-bottom: 10px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.foot .padd {
+    padding: 10px;
+    color: #ffffff;
+}
+.jtxt {
+    text-align: justify;
+}
+.ctxt{
+    text-align: center;
+}
+.footer-logo {
+    height: 118px;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+.social {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.social a i {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    -webkit-transition: all 1.5s ease;
+    transition: all 1.5s ease;
+
+    width: 30px;
+    height: 30px;
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 12px;
+    line-height: 30px;
+    border-radius: 50px;
+}
+
+
+.social a.facebook i{
+    background:#1e78ae;
+}
+
+.social a.twitter i{
+    background:#1ba1e2;
+}
+
+.social a.google-plus i{
+    background:#f22d0c;
+}
+
+.social a.linkedin i{
+    background:#2d93cf;
+}
+
+.social a.pinterest i{
+    background:#dd1617;
+}
+
+.social a:hover i{
+    background:#000;
+}
+

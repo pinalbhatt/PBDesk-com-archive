@@ -1,38 +1,65 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
+<div class="row">
+    <div class="container">
+        <div class="AdPlace hidden-xs hidden-sm">
+            {% include Ad/728x90.html %}
+        </div>
     </div>
 
-  </div>
+</div>
+<div class="foot">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="padd">
+                    <div class="widget"><h3>Learning endeavor for ever…</h3>
+                        <p class="jtxt">Welcome to My Blog! On this site you'll find interesting posts,
+                            articles, tutorials, news updates and links on Microsoft.Net, ASP.NET, MVC, WebAPIs, C#,
+                            Windows8, Metro Apps, WCF, XAML, JavaScript, jQuery, AngularJS, NodeJS, Social Media,
+                            Mobiles, Science &amp; Technology and other random thoughts and opinions.</p>
+                        <p class="pull-right"><i>- Pinal Bhatt</i></p>
 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="padd">
+                    <h3>About Me</h3>
+                    <div class="staff">
+                        <div class="">
+                            <a href="#">
+                            <img class="footer-logo img-responsive img-rounded"
+                                                 src="/assets/images/logo/PBDesk/PBDesk.png" alt="PBDesk Logo">
+                            </a>
+                        </div>
+                        <p class="ctxt" style="padding: 10px; font-style: italic">software engineer<br/> and<br/> always on learning ramp</p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="padd">
+                    <div class="widget"><h3>My Sites & Apps</h3>
+                        <ul style="list-style: none;">
+                            <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                            <li><a href="/feed.xml"><i class="fa fa-rss"></i> RSS</a></li>
+                            <li><a href="/SiteMap" target="_blank"><i class="fa fa-sitemap"></i> SiteMap</a></li>
+                            <li><a href="/Disclaimer"><i class="fa fa-warning"></i> Disclaimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="fpadd">Pinal Bhatt's Blog © 2016 | PBDesk.com</div>
+                <div class="fpadd">Concept Design, Develop & Perceived by Pinal Bhatt.</div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
 </footer>
