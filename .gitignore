@@ -1,4 +1,6 @@
-_site/
+serve/
 .sass-cache/
+serve/.sass-cache/
+src/.sass-cache/
 .jekyll-metadata
 .idea/workspace.xml

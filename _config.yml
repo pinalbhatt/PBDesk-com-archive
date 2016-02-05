@@ -22,5 +22,7 @@ author:
 # Build settings
 markdown: kramdown
 
+source: src
+destination: serve
 gems:
   - jekyll-gist
