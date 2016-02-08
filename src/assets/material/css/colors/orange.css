@@ -115,3 +115,19 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   background-color: #e67e22;
 }
 
+.btn.disabled {
+    background-color: #e67e22;
+    color: #fff;
+    cursor: default;
+}
+.btn.disabled:focus {
+    background-color: #e67e22;
+    color: #fff;
+    cursor: default;
+}
+.btn.disabled:hover {
+    background-color: #e67e22;
+    color: #fff;
+    cursor: default;
+}
+

@@ -89,7 +89,7 @@
 }
 
 .cv-style-switch ul.styles li .red {
-    background: #ff3030;
+    background: #e74c3c;
 }
 
 .cv-style-switch ul.styles li .coral-red {
@@ -97,7 +97,7 @@
 }
 
 .cv-style-switch ul.styles li .purple {
-    background: #8e44ad;
+    background: #673ab7;
 }
 
 .cv-style-switch ul.styles li .blue {
@@ -110,10 +110,6 @@
 
 .cv-style-switch ul.styles li .green {
     background: #1abc9c;
-}
-
-.cv-style-switch ul.styles li .deep-purple {
-    background: #673ab7;
 }
 
 .cv-style-switch ul.styles li .bottle {

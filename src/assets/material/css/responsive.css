@@ -1,9 +1,4 @@
-/*
-|----------------------------------------------------------------------------
-| Smartphones (landscape)
-|----------------------------------------------------------------------------
-*/
-
+/* Smartphones (landscape) */
 @media only screen and (min-width: 321px) and (max-device-width: 568px) {
   .container {
     width: 100% !important;
@@ -47,12 +42,7 @@
     margin-right: initial;
   }
 }
-/*
-|----------------------------------------------------------------------------
-| Smartphones (portrait) 
-|----------------------------------------------------------------------------
-*/
-
+/* Smartphones (portrait) */
 @media only screen and (max-width: 320px) {
   .container {
     width: 100% !important;
@@ -95,13 +85,7 @@
     text-align: center;
   }
 }
-
-/*
-|----------------------------------------------------------------------------
-| iPads (landscape)
-|----------------------------------------------------------------------------
-*/
-
+/* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   /* Sidebar Style*/
   .sidebar .icon {
@@ -251,6 +235,9 @@
   #contact {
     padding: 0px 40px;
   }
+  #form-submit {
+    width: 100%;
+  }
   /* Full post comment Style*/
   .comment {
     padding: 0 40px !important;
@@ -258,16 +245,23 @@
   .comment-form {
     padding: 0 50px !important;
   }
+  .comment-form .input-field:last-child {
+    padding-left: 0;
+  }
+  .comment-form .btn {
+    width: 100%;
+  }
+  .comment-img img {
+    width: 100px;
+  }
   .comment-details {
     padding: 20px;
   }
+  .project-description {
+    padding: 0 20px;
+  }
 }
-/*
-|----------------------------------------------------------------------------
-| iphone 6 (portrait and landscape) 
-|----------------------------------------------------------------------------
-*/
-
+/* iphone 6 (portrait and landscape)  */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   body {
     text-align: center;

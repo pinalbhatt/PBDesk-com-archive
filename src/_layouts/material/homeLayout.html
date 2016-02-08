@@ -9,7 +9,7 @@ layout: material/rootLayout
     <!--  Sidebar row -->
     <div class="row">
         <!--  profile pic & Menu   -->
-        {% include material/widgets/profilePic.html %}
+        {% include material/widgets/menuAndLogo.html %}
         <!-- sidebar info -->
         <div class="col l12 m12 s12 sort-info sidebar-item">
             <div class="row">
@@ -24,6 +24,65 @@ layout: material/rootLayout
                 </div>
             </div>
         </div>
+        {% include material/widgets/aboutMeSidebar.html %}
+        <div class="col l12 m12 s12  mobile sidebar-item">
+            <div class="row">
+                <div class="col m12 s12 l3 icon">
+                    <i class="fa fa-graduation-cap"></i> <!-- icon -->
+                </div>
+                <div class="col m12 s12 l9 info wow fadeIn a2" data-wow-delay="0.2s" style="border-bottom: none !important;" >
+                    <div class="section-item-details">
+                        <div class="personal">
+                            <h4><a href="tel:555-555-5555">My Resume</a></h4> <!-- Number -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col m12 s12 l3 icon">
+                    <i class="fa fa-send"></i> <!-- icon -->
+                </div>
+                <div class="col m12 s12 l9 info wow fadeIn a2" data-wow-delay="0.2s"  style="border-bottom: none !important;">
+                    <div class="section-item-details">
+                        <div class="personal">
+                            <h4><a href="tel:555-555-5555">Contact Me</a></h4> <!-- Number -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col m12 s12 l3 icon">
+                    <i class="fa fa-rss-square"></i> <!-- icon -->
+                </div>
+                <div class="col m12 s12 l9 info wow fadeIn a2" data-wow-delay="0.2s" >
+                    <div class="section-item-details">
+                        <div class="personal">
+                            <h4><a href="tel:555-555-5555">Subscribe Rss</a></h4> <!-- Number -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col l12 m12 s12  mobile sidebar-item">
+            <div class="row">
+                <div class="col m12 s12 l3 icon">
+                    <i class="fa fa-phone"></i> <!-- icon -->
+                </div>
+                <div class="col m12 s12 l9 info wow fadeIn a2" data-wow-delay="0.2s" >
+                    <div class="section-item-details">
+                        <div class="personal">
+                            <h4><a href="#">My Sites & Apps</a></h4>
+                            <div>&nbsp;</div>
+                            <div><a href="#"><i class="fa fa-graduation-cap pull-right"></i> My Resume</a></div>
+                            <div><a href="#"><i class="fa fa-gear pull-right"></i> RoKen</a></div>
+                            <div><a href="#"><i class="fa fa-grid pull-right"></i>  KenKen</a></div>
+                        </div>
+                        <div class="work">
+                            <h4><a href="tel:555-555-5555">(121)-323-3494</a></h4> <!-- Number -->
+                            <span>work</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- MOBILE NUMBER -->
         <div class="col l12 m12 s12  mobile sidebar-item">
             <div class="row">
@@ -238,5 +297,7 @@ layout: material/rootLayout
                 </div>
             </div>
         </div>
+        {% include material/widgets/R1Add.html %}
+        {% include material/footer.html %}
     </div><!-- end row -->
 </section><!-- end section -->

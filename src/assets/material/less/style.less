@@ -1,66 +1,154 @@
 /*------------------------------------------------------------------
-[Master Stylesheet]
 
+[Master Stylesheet]
 Project:	    Matarial CV/Resume Template 
 Version:	    1.0
-Last change:	12/08/15 
-Primary use:	CV/Resume, Portfolio  
+Last change:	06/02/16 
+Primary use:	CV/Resume, Portfolio, Perosnal Website 
+
 -------------------------------------------------------------------*/
+
 /*
 |----------------------------------------------------------------------------
 | CSS INDEX
 |----------------------------------------------------------------------------
-    1. GLOBAL STYLESHEET
-        1-1. COMPONENTS
+    1. STYLESHEET
+        1-1. CUSTOM 
         1-2. TYPOGRAPHY
         1.3. BODY
     2. SIDEBAR
-        2.1. NAV
-    3. SECTION
-        3.1 WORK EXPERIENCE
-        3.2 INTERESTS
-        3.2 WEBSITE
-    4. PROJECT
-        4.1 COMMENT
-    5. COVER LATTER
-    6. CONTACT
+    3. SECTIONS CUSTOM STYLE
+    4. WORK EXPERIENCE
+    5. INTEREST
+    6. WEBSITE
+    7. BLOG
+    8. COVER LATTER
+    9. CONTACT
+    10. PORTFOLIO
+
+------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[ Color codes ]
+    main-color:         #5da4d9;
+    Blue:               #71DD75 (Blue)    [ This is the main color in Template ]
+    white:              #FFFFFF (White)     [  ]
+    body-bg-color:      #eae8e7            [ body bg color ]
+    font-color:         #767270             [ font color  ]
+    border-color:       #4783c2;
+
+------------------------------------------------------------------ */
+
+
+
+@blue: #71DD75;
+@white: #ffffff;
+@body-bg-color: #eae8e7;
+@main-color: #5da4d9;
+@border-color: #4783c2;
+@font-color: #767270;
+
+
+*{
+    font-family: 'roboto', sans-serif;
+}
+
+.fix{
+    overflow: hidden;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 10pt;
+    line-height: 17pt;
+}
+a{
+    color: @white;
+}
+.clear {
+    clear: both;
+}
+
+
+/* style for wow animation*/
+
+.a1{
+    visibility: visible; -webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;
+}
+.a2{
+    visibility: visible; -webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;
+}
+
+.a3{
+    visibility: visible; -webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s; 
+}
+
+.a4{
+    visibility: visible; -webkit-animation-delay: 0.4s; -moz-animation-delay: 0.4s; animation-delay: 0.4s;
+}
+.a5{
+    visibility: visible; animation-delay: 0.5s; -webkit-animation-delay: 0.5s; animation-name: fadeIn; -webkit-animation-name: fadeIn;
+}
+
+/* style for Typography */
+
+h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+h2{
+    font-size: 22pt;
+    line-height: 37pt;
+    margin: 0px;
+}
+
+h3{
+    font-size: 14pt;
+    line-height: 24pt;
+}
+
+h4{
+    font-size: 12pt;
+    line-height: 20pt;
+    opacity: 1;
+}
+
+h5 {
+    font-size: 10pt;
+    margin: 0px;
+    padding: 0px;
+    line-height: 15pt;
+}
+
+.fa{
+    font-size: 22px;
+}
+
+
+/* style for
+
+***** body  *****
 
 */
 
-/*
-|----------------------------------------------------------------------------
-| GLOBAL STYLESHEET
-|----------------------------------------------------------------------------
-*/
-
-/* Component imported */
-@import "component";
-/* Typography imported */
-@import "typography";
-/* Colors imported */
-@import "colors";
-
-/*
-|----------------------------------------------------------------------------
-| BODY
-|----------------------------------------------------------------------------
-*/
 body{
     background-color: @body-bg-color;
     color: @font-color;
     text-align: center;
-
-    .container{
-        margin-top: 24px;
-        width: 970px;
-        max-width: none !important;
-        }
 }
-/*
-|----------------------------------------------------------------------------
-| SIDEBAR
-|----------------------------------------------------------------------------
+.container{
+    margin-top: 24px;
+}
+
+
+/* style for
+
+***** Sidebar  *****
+
 */
+
 
 .sidebar{
     text-align: left;
@@ -68,165 +156,180 @@ body{
     background-color: @main-color;
     overflow: hidden; 
     display: block;
-}
 
-.heading{ 
-    position: relative;
+    .heading{ 
+        position: relative;
 
-    .feature-img {
-      position: relative;
+        .feature-img {
+          position: relative;
 
-        img{
-            width: 100%;
+            img{
+                width: 100%;
+            }
         }
-    }
-/*
-|----------------------------------------------------------------------------
-| NAV
-|----------------------------------------------------------------------------
-*/    
-    .button-collapse{
-        display: block !important;
-    }
-    .nav-icon {
-        position: absolute;
-        top: 0;
-        padding: 0 16px;
-    }
-    nav{
-        background-color: inherit;
-            box-shadow: inherit;
 
         .button-collapse{
-            i{
-                height: 30px;
-                font-size: 18pt;                        
-                line-height: 24pt;
-                background-color: @main-color;
-                margin-top: 20px;
-                padding: 0px 6px;
-            }
+            display: block !important;
         }
-        .side-nav{
-            h3{
-                color: @main-color;
-                padding: 0 15px;
+
+        .nav-icon {
+            position: absolute;
+            top: 0;
+            padding: 0 16px;
+        }
+
+        nav{
+            background-color: initial;
+                box-shadow: initial;
+
+            .button-collapse{
+                i{
+                    height: 30px;
+                    font-size: 18pt;                        
+                    line-height: 24pt;
+                    background-color: @main-color;
+                    margin-top: 20px;
+                    padding: 0px 6px;
+                }
             }
-            li{
-                a{
+            .side-nav{
+                h3{
+                    color: @main-color;
+                    padding: 0 15px;
+                }
+                li{
+                    a{
+                        &:hover{
+                            color: @main-color;
+                        }
+                    }
                     &:hover{
-                        color: @main-color;
+                        background-color: transparent !important;
                     }
                 }
-                &:hover{
-                    background-color: transparent !important;
+            }
+        }
+
+        .title{ 
+            position: absolute;
+            right: 11px;
+            bottom: 46px;
+            span{
+                margin-top: -5px;
+                font-size: 10pt;
+                margin: 0px;
+                padding: 0px;
+                line-height: 15pt;
+            }
+        }
+    }
+
+    .icon {        
+        margin-top: 8px;
+        .fa{
+            display: inherit;
+            text-align: center;
+        }
+    }
+
+    .sidebar-item{
+        overflow: hidden;
+        margin-top: 10px;
+
+        &:first-child {
+            margin-top: 30px;
+        }
+    }
+
+    .section-item-details{
+        padding-right: 26px;        
+        margin-bottom: 30px;        
+        p{
+            margin: 0px;
+        }
+    }
+
+    .info{        
+        border-bottom: 1px solid @border-color;
+        padding-left: 0px;   
+        span{
+            opacity: 0.7;
+            font-weight: 300;
+        }
+    }
+
+    .personal{
+        margin-bottom: 20px;
+        h4{
+            margin: 0px;
+        }
+    }
+
+    .work{
+        h4{
+            margin-bottom: 0px;
+        }
+    }
+
+    .address-details{
+        h4{
+            margin-top: 0px;            
+
+            span{
+                font-size: 10pt;
+            }
+        }
+    }
+
+    .skill-line{
+        padding-right: 30px;
+        padding-left: 0px; 
+        .progress{
+            background-color: @border-color;
+            height: 2px;
+            overflow: visible;
+            }
+            .determinate{
+                background-color: @white;
+                .fa{
+                    font-size: 12px;
+                    position: absolute;
+                    top: -5px;
+                    right: 0px;
+                    margin-left: 50%;
                 }
             }
+        
+        h3{
+            margin-top: 0px;
+            margin-bottom: 20px;
         }
-    }
-    .title{ 
-        position: absolute;
-        right: 11px;
-        bottom: 46px;
-        h5{
-            margin-top: -5px;
-        }
-    }
-}
-.icon {        
-    margin-top: 8px;
-    .fa{
-        display: inherit;
-        text-align: center;
-    }
-}
-.sidebar-item{
-    overflow: hidden;
-    margin-top: 10px;
-
-    &:first-child {
-        margin-top: 30px;
-    }
-}
-.section-item-details{
-    padding-right: 26px;        
-    margin-bottom: 30px;        
-    p{
-        margin: 0px;
-    }
-}
-.info{        
-    border-bottom: 1px solid @border-color;
-    padding-left: 0px;   
-    span{
-        opacity: 0.7;
-        font-weight: 300;
-    }
-}
-.personal{
-    margin-bottom: 20px;
-    h4{
-        margin: 0px;
-    }
-}
-.work{
-    h4{
-        margin-bottom: 0px;
-    }
-}
-.address-details{
-    h4{
-        margin-top: 0px;            
-
         span{
-            font-size: 10pt;
+            opacity: initial;
         }
-    }
-}
-.skill-line{
-    padding-right: 30px;
-    padding-left: 0px; 
-    .progress{
-        background-color: @border-color;
-        height: 2px;
-        overflow: visible;
-        }
-        .determinate{
-            background-color: @white;
-            .fa{
-                font-size: 12px;
-                position: absolute;
-                top: -5px;
-                right: 0px;
-                margin-left: 50%;
-            }
-        }
-    h3{
-        margin-top: 0px;
-        margin-bottom: 20px;
-    }
-    span{
-        opacity: initial;
     }
 }
 
-/*
-|----------------------------------------------------------------------------
-| FORMATTING
-|----------------------------------------------------------------------------
+/* style for
+
+***** Sections *****
+
 */
 
 #section{
     overflow: hidden;
 }
+
 .section{
     padding-left: 32px !important;
     text-align: left;
+
     .fa {
         text-align: center;
         display: block;
         font-size: 30pt;
     }
+
     .section-wrapper{
         background-color: @white;
         overflow: hidden;
@@ -235,6 +338,7 @@ body{
         .section-icon {
             margin-top: 40px;
         }
+        
         h2{
             margin-top: 30px;
             margin-bottom: 25px;
@@ -242,15 +346,16 @@ body{
     }
 }
 
-/*
-|----------------------------------------------------------------------------
-| WORK EXPERIENCE 
-|----------------------------------------------------------------------------
+/* style for
+
+***** Work Experience  *****
+
 */
 
 .custom-content{
     padding-right: 0px !important;
 }
+
 .custom-content-wrapper{
     padding-right: 30px;
     margin-bottom: 25px;
@@ -259,6 +364,7 @@ body{
     &:last-child{
       border-bottom: initial;  
     }
+
     h3{
         margin: 0px;
         font-size: 12pt;
@@ -268,6 +374,7 @@ body{
             color: @font-color;
         }
     }
+
     span{
         color: @main-color;
         margin-top: 0px;
@@ -280,11 +387,12 @@ body{
     }
 }
 
-/*
-|----------------------------------------------------------------------------
-| INTERESTS
-|----------------------------------------------------------------------------
+/* style for
+
+*****  Interests  *****
+
 */
+
 .interests{    
     ul{
         padding-left: 0px;
@@ -301,11 +409,12 @@ body{
     }
 }
 
-/*
-|----------------------------------------------------------------------------
-| WEBSITE
-|----------------------------------------------------------------------------
+/* style for
+
+***** Portfolio website  *****
+
 */
+
 .website {
     padding-top: 40px !important;
     padding: 20px;
@@ -320,25 +429,28 @@ body{
     }
 }
 
-/*
-|----------------------------------------------------------------------------
-| PROJECTS
-|----------------------------------------------------------------------------
+/* style for
+
+***** blog  *****
+
 */
 
 .post-title{
     margin-top: -5px;
     color: white;
-    padding: 20px;
+    padding: 20px 30px;
+
     h2{
         margin: 0px;
         font-size: 14pt;
         line-height: 24pt;
     }
+
     span{
        opacity: 0.7; 
     }    
 }
+
 .blog-post{
     .thumbnail {
         img{
@@ -346,16 +458,20 @@ body{
             margin-bottom: -2px;
         }
     }
+
     &:nth-child(odd) {
         padding-left: 0px !important;
-    }
+    }  
+
     &:nth-child(even) {
         padding-right: 0px !important;
-    } 
+    }  
+
     &:last-child{
         padding-right: 0px !important; 
     }
 }
+
 #blog-post-1{
     background-color: #e95855;
 }
@@ -373,7 +489,7 @@ body{
 }
 .post-details {
     background-color: @white;
-    padding: 20px;
+    padding: 20px 30px;
     margin-bottom: 24px;
 }
 .featured-img{
@@ -387,13 +503,6 @@ body{
         margin-bottom: 0px;
     }
 }
-
-/*
-|----------------------------------------------------------------------------
-| COMMENT
-|----------------------------------------------------------------------------
-*/
-
 .comment{
     .section-wrapper{
         padding-bottom: 0px !important;
@@ -401,12 +510,18 @@ body{
     }
     .comment-img{
         padding: 10px;
+        
+        img{
+        
+        }
     }
     .comment-details{
         padding: 10px;
+        
         h4{
             margin: 0px;
         }
+        
         span{
             font-size: 9pt;
             line-height: 17pt;
@@ -417,19 +532,38 @@ body{
     padding-bottom: 0px;
     background-color: #fff;
     padding: 20px 50px !important;
+    
+    
 }
 
-/*
-|----------------------------------------------------------------------------
-| COVER LATTER
-|----------------------------------------------------------------------------
+/* style for
+    **************
+   * Cover latter * 
+ 
 */
-
 .cover-latter{
     padding: 30px;
     margin-right: 5px;
     margin-bottom: 24px;
     background-color: white;
+    
+
+    strong{
+        font-weight: 400;
+    }
+    
+    p{
+        &:last-child{
+            margin: 30px 0px;
+        } 
+        
+        h2{
+            margin-bottom: 0px;
+            font-size: 12pt;
+            line-height: 20pt;
+        }
+    }
+    
     .cover-title{
         span{
             font-size: 12pt;
@@ -442,38 +576,25 @@ body{
             margin-top: 20px;
         }
         
-        p{
-            margin-top: 0px !important;
-        }
-        
         h4{
             font-weight: 500;
         }
-    }
-    strong{
-        font-weight: 400;
-    }
-    p{
-        &:last-child{
-            margin: 30px 0px;
-        } 
-        h2{
-            margin-bottom: 0px;
-            font-size: 12pt;
-            line-height: 20pt;
+        p{
+            margin-top: 0px;
         }
     }
+    
     .signature{
         h4{
             margin: 0px;
         }
     }
 }
-/*
-|----------------------------------------------------------------------------
-| CONTACT
-|----------------------------------------------------------------------------
+
+/* ***** Contact  *****
+*
 */
+
 
 .section{
     .g-map{
@@ -484,6 +605,7 @@ body{
         }
     }
 }
+
 input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), 
 input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), 
 input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), 
@@ -492,6 +614,7 @@ input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly
 textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid @main-color;
 }
+
 input[type=text]:focus:not([readonly])+label,
 input[type=password]:focus:not([readonly])+label, 
 input[type=email]:focus:not([readonly])+label, 
@@ -510,7 +633,6 @@ textarea.materialize-textarea:focus:not([readonly])+label {
 .btn{
     margin-left:10px;
     background-color: @main-color;
-    
     &:hover, &:focus{
         background-color: @main-color;
     }
@@ -520,4 +642,157 @@ textarea.materialize-textarea:focus:not([readonly])+label {
     text-align: left !important;
     margin: 0 0 0 0 !important;
 }
+.btn.disabled {
+    background-color: @main-color;
+    color: #fff;
+    cursor: default;
+}
+.btn.disabled:focus {
+    background-color: @main-color;
+    color: #fff;
+    cursor: default;
+}
+.btn.disabled:hover {
+    background-color: @main-color;
+    color: #fff;
+    cursor: default;
+}
 
+#msgSubmit {
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+.text-danger {
+  color: red;
+}
+.text-success {
+  color: #5da4d9 ;
+}
+
+
+/*
+|----------------------------------------------------------------------------
+| PORTFOLIO
+|----------------------------------------------------------------------------
+*/
+
+.portfolio-nav{
+    ul{
+    margin: 30px;
+    text-align: center;
+        li{
+            list-style-type: none;
+            display: inline;
+            margin: 10px;
+            padding-bottom: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            
+            &:hover{
+                border-bottom: 1px solid #bdbdbd;
+            }
+        }
+    }
+}
+
+.mix{
+    display: none;
+}
+.fancybox-overlay {
+    background-color: rgba(25, 22, 22, 0.69);
+}
+
+
+.back-btn{
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+    .fa{
+        display: inline;
+    }
+}
+#back-button {
+	display: none;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0 auto; 
+	padding: 15px;
+}
+#back-button i {
+    margin-right: 10px;
+    font-size: 30px;
+    opacity: 0.9;
+    position: relative;
+    top: 5px;
+    margin-right: 15px;
+}
+#back-button img{
+    padding: 10px;
+}
+
+#loader {
+	min-height: 930px;
+	position: relative;
+	display: none;
+}
+#loader .loader-icon {
+    background: url(../images/loading.gif) no-repeat center center;
+    background-color: #FFF;
+    margin: -22px -22px;
+    top: 50%;
+    left: 60%;
+    z-index: 10000;
+    position: fixed;
+    width: 44px;
+    height: 44px;
+    -webkit-background-size: 30px 30px;
+    background-size: 30px 30px;
+    border-radius: 5px;
+}
+.full-project{
+    padding: 30px !important;
+}
+.single-project {
+    background-color: #fff;
+    margin-bottom: 20px;
+    .full-project-title {
+        font-size: 30px;
+    }
+}
+
+.single-project-img{
+    margin: 0;
+    padding: 0 !important;
+}
+
+.single_image{
+    color: #fff;
+    text-align: left;
+    h2{
+        font-size: 22px;
+        line-height: 34px;
+        margin: 10px 0;
+    }
+    p{
+        text-transform: normal;
+        margin-top: 10px;
+        opacity: 0.8;
+    }
+}
+.full-portfolio{
+    position: relative;
+    .section-wrapper{
+        padding-bottom: 0 !important;
+    }
+}
+.full-project-content{
+    padding: 30px;
+}
+.project-information{
+    li{
+        a{
+            color: @main-color;
+        }
+    }
+}
