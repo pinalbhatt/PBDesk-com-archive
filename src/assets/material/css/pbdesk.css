@@ -55,3 +55,16 @@
 .ctxt{
     text-align: center;
 }
+
+.a-c{
+    color: #767270; //theme color
+}
+.a-c:hover{
+    color: #000000;
+}
+
+.a-c .fa {
+    text-align: inherit !important;
+    display: inline;
+    font-size: inherit;
+}
