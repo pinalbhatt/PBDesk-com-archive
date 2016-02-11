@@ -14,7 +14,7 @@ layout: material/rootLayout
         {% include material/widgets/sideBarW3.html %}
 
         <!-- SKILLS -->
-        <div class="col l12 m12 s12  skills sidebar-item" >
+        <div class="col l12 m12 s12  skills sidebar-item sidebar-item hide-on-med-and-down" >
             <div class="row">
                 <div class="col m12 l3 s12 icon">
                     <i class="fa fa-calendar-o"></i> <!-- icon -->
@@ -23,122 +23,15 @@ layout: material/rootLayout
                 <div class="col m12 l9 s12 skill-line a5 wow fadeIn" data-wow-delay="0.5s">
                     <h3>Featured </h3>
 
-                    <span>Adobe Photoshop</span>
-                    <div class="progress">
-                        <div class="determinate"> 70% </div>
-                    </div>
 
-                    <span>HTML</span>
-                    <div class="progress">
-                        <div class="determinate"> 95%</div>
-                    </div>
-
-                    <span>CSS</span>
-                    <div class="progress">
-                        <div class="determinate">90%</div>
-                    </div>
-
-                    <span>Javascript</span>
-                    <div class="progress">
-                        <div class="determinate">85%</div>
-                    </div>
-
-                    <span>PHP</span>
-                    <div class="progress">
-                        <div class="determinate">70%</div>
-                    </div>
-
-                    <span>JAVA</span>
-                    <div class="progress">
-                        <div class="determinate">55%</div>
-                    </div>
-
-                    <span>SQL</span>
-                    <div class="progress">
-                        <div class="determinate">40%</div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 </aside>
 
-
-
-<!-- =========================================
-   Work experiences
-==========================================-->
-
 <section class="col s12 m12 l8 section">
     <div class="row">
-        <div class="section-wrapper z-depth-1">
-            <div class="section-icon col s12 m12 l2">
-                <i class="fa fa-home"></i>
-            </div>
-            <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s">
-
-
-                <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s" style="margin-top: 25px">
-
-                    <p>Hi Everyone! I'm Pinal Bhatt and Welcome to My Desk! On this site you'll find interesting posts, articles, tutorials, news updates and links on Microsoft.Net, ASP.NET, MVC, WebAPIs, C#, VB.Net, Silverlight, WPF, Windows8, Metro Apps, WCF, XAML, JavaScript, jQuery, AngularJS, NodeJS, MongoDB, Mocha,Design Patterns, Social Media, Mobiles, Science & Technology and other random thoughts and opinions.</p>
-                    <p>I created this site to narrate my coding and technology learning experiences. I like sharing my experiments, ideas and experience with everyone by writing articles on latest technological trends. I feel pleased and pride by sharing my knowledge and information that I have gained via Internet. And this site is my heartily attempt towards this.</p>
-                </div>
-                <div class="custom-content-wrapper wow fadeIn a3" data-wow-delay="0.3s">
-                    <h3><a href="#" class="a-c">eBooks</a></h3>
-                    <p>one of the basic source of Knowledge in digital format</p>
-                </div>
-                <div class="custom-content-wrapper wow fadeIn a3" data-wow-delay="0.3s">
-                    <h3><a href="#" class="a-c">Gists</a></h3>
-                    <p>Sharing Code Snippets</p>
-                </div>
-                <div class="custom-content-wrapper wow fadeIn a4" data-wow-delay="0.4s">
-                    <h3><a href="#" class="a-c">Tutorials</a></h3>
-
-                    <p>free online tutorials and videos for self learning </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- ========================================
-         Education
-        ==========================================-->
-
-        <div class="section-wrapper z-depth-1">
-            <div class="section-icon col s12 m12 l2">
-                <i class="fa fa-file-text-o"></i>
-            </div>
-            <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s" >
-                <h2>Featured Posts </h2>
-
-                {% for post in site.posts %}
-                {% if post.featured == true  %}
-                <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s" >
-                    <h3><a class="a-c" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-                    <span>{{ post.date | date: "%b %-d, %Y" }} </span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-                {% endif %}
-                {% endfor %}
-
-                <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s" >
-                    <div><a class="a-c pull-right" href="{{ post.url | prepend: site.baseurl }}">...More.. <i class="fa fa-arrow-circle-right"></i></a></div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-        <div class="section-wrapper z-depth-1 wow fadeIn" data-wow-delay="0.1s">
-            <div class="col s12 m12 l10 website right" >
-                <div class="row">
-                    <div class="col s12 m12 l6">
-                        {{ content }}
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% include material/widgets/R1Add.html %}
-        {% include material/footer.html %}
-    </div><!-- end row -->
-</section><!-- end section -->
+        {{ content }}
+    </div>
+</section>

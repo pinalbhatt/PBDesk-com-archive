@@ -57,8 +57,9 @@
 }
 
 .a-c{
-    color: #767270; //theme color
+    color: #767270 !important; //theme color
 }
+
 .a-c:hover{
     color: #000000;
 }
@@ -67,4 +68,30 @@
     text-align: inherit !important;
     display: inline;
     font-size: inherit;
+}
+.fpadd{
+    color: #000;
+}
+
+ul#footer-menu li {
+    display: inline;
+}
+
+ul#footer-menu li a {
+    color: #767270 !important; //theme color
+    padding: 10px 20px;
+    text-decoration: none;
+}
+ul#footer-menu li:first-child:before {
+    content: none;
+
+}
+
+ul#footer-menu li:before {
+    content: ' | ';
+    margin: 0 10px 0 8px;
+}
+
+ul#footer-menu li a:hover {
+    color: #000000;
 }
