@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Using jQuery Scripts hosted @ Microsoft</title>
+  <meta name="description" content="As mentioned in my previous post, rather then hosting jQuery libraries on our sever we can directly use them from CDN services available from Microsoft &amp;...">
+   <meta name="author" content="">
+   
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha256-Ucf/ylcKTNevYP6l7VNUhGLDRZPQs1+LsbbxuzMxUJM= sha512-FW2XqnqMwERwg0LplG7D64h8zA1BsxvxrDseWpHLq8Dg8kOBmLs19XNa9oAajN/ToJRRklfDJ398sOU+7LcjZA==" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/custom.css">
+  <link rel="canonical" href="http://yourdomain.com/blog/javascript/microsoft/using-jquery-scripts-hosted-microsoft">
+  <link rel="alternate" type="application/rss+xml" title="Pinal Bhatt's Blog" href="http://yourdomain.com/feed.xml">
+  
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+
+  <body>
+
+        <div class="navbar navbar-default navbar-fixed-top topnav-border">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">PBDesk.com</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">This Site <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                <li class="divider"></li>
+                <li><a href="../cerulean/">My Posts</a></li>
+                <li><a href="../cosmo/">Gists</a></li>
+                <li><a href="../cyborg/">eBooks</a></li>
+                <li><a href="../darkly/">Tutorial</a></li>
+                  <li class="divider"></li>
+                  <li><a href="../darkly/">RSS</a></li>
+                  <li><a href="../darkly/">SiteMap</a></li>
+                  <li><a href="../darkly/"> Disclaimer</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">About <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="download">
+                <li><a href="http://jsfiddle.net/bootswatch/9y480qo5/"><i class="fa fa-user"></i> About Me</a></li>
+                  <li><a href="http://jsfiddle.net/bootswatch/9y480qo5/"><i class="fa fa-send"></i> Contact Me</a></li>
+                  <li><a href="http://jsfiddle.net/bootswatch/9y480qo5/"><i class="fa fa-graduation-cap"></i>  My Resume</a></li>
+                <li class="divider"></li>
+                <li class="menuHeadText">Follow Me</li>
+                <li><a href="./bootstrap.min.css"><i class="fa fa-facebook pull-right"></i>Facebook</a></li>
+                  <li><a href="./bootstrap.min.css"><i class="fa fa-twitter pull-right"></i> Twitter</a></li>
+                  <li><a href="./bootstrap.min.css"><i class="fa fa-linkedin pull-right"></i> LinkedIN</a></li>
+                  <li><a href="./bootstrap.min.css"><i class="fa fa-google-plus pull-right"></i> Google+</a></li>
+                  <li><a href="./bootstrap.min.css"><i class="fa fa-github pull-right"></i> Github</a></li>
+
+                <li class="divider"></li>
+                  <li class="menuHeadText">My Other Sites</li>
+                <li><a href="./variables.less">RoKen</a></li>
+                <li><a href="./bootswatch.less">KenKen</a></li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+
+
+        <div class="container">
+
+      
+
+      <div class="row">
+          
+          
+
+        <div class="col-sm-8 blog-main">
+            
+          
+
+            <div class="page-content">
+                <div class="wrapper">
+                    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header" data-spy="affix" data-offset-top="25">
+    <h1 class="post-title"  itemprop="name headline">Using jQuery Scripts hosted @ Microsoft</h1>
+    <p class="post-meta"><time datetime="2010-12-07T14:53:00-05:00" itemprop="datePublished">Dec 7, 2010</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{"login"=>"pbadmin", "email"=>"pinalbhatt@gmail.com", "display_name"=>"PBDesk Admin", "first_name"=>"Pinal", "last_name"=>"Bhatt"}</span></span></p>
+      <p class="post-meta"><span><a href="/tag/blog">blog</a> </span><span><a href="/tag/JavaScript">JavaScript</a> </span><span><a href="/tag/Microsoft">Microsoft</a> </span></p>
+    <p class="post-meta"></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p align="justify">As mentioned in my <a href="http://www.p-bhatt.com/2010/12/using-cdn-hosted-jquery-library.html" target="_blank">previous post</a>, rather then hosting jQuery libraries on our sever we can directly use them from CDN services available from Microsoft &amp; Google. And there are various advantages of using this. In this article we will see on how to use jQuery library hosted at Microsoft Ajax Content Delivery Network(ajax.aspnetcdn.com) </p>
+<p align="justify">Microsoft Ajax CDN includes jQuery ,jQuery UI, jQuery Validation, jQuery Cycle, Ajax Control Toolkit, ASP.NET Ajax, ASP.NET MVC JavaScript Files. For detail list of files available and versions supported please visit this <a href="http://www.asp.net/ajaxlibrary/cdn.ashx" target="_blank">link</a>.</p>
+<p align="justify">The Microsoft Ajax Content Delivery Network (CDN) enables you to easily add jQuery to your Web applications. For example, you can start using jQuery simply by adding a &lt;script&gt; tag to your page that points to ajax.aspnetcdn.com.    </p>
+<h2>Using jQuery from the CDN </h2>
+<div style="border-bottom: silver 1px solid; text-align: left; border-left: silver 1px solid; padding-bottom: 4px; line-height: 12pt; background-color: #f4f4f4; margin: 20px 0px 10px; padding-left: 4px; width: 97.5%; padding-right: 4px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; max-height: 200px; font-size: 8pt; overflow: auto; border-top: silver 1px solid; cursor: text; border-right: silver 1px solid; padding-top: 4px">
+<div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">&lt;script </pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">    src=<span style="color: #006080">&quot;http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.4.4.js&quot;</span> </pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">    type=<span style="color: #006080">&quot;text/javascript&quot;</span>&gt;</pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">&lt;/script&gt;</pre>
+<p><!--CRLF--></div>
+</div>
+<h4>Minified version: </h4>
+<div style="border-bottom: silver 1px solid; text-align: left; border-left: silver 1px solid; padding-bottom: 4px; line-height: 12pt; background-color: #f4f4f4; margin: 20px 0px 10px; padding-left: 4px; width: 97.5%; padding-right: 4px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; max-height: 200px; font-size: 8pt; overflow: auto; border-top: silver 1px solid; cursor: text; border-right: silver 1px solid; padding-top: 4px">
+<div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">&#160;</pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">&lt;script </pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">    src=<span style="color: #006080">&quot;http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.4.4.min.js&quot;</span> </pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">    type=<span style="color: #006080">&quot;text/javascript&quot;</span>&gt;</pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">&lt;/script&gt;</pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">&#160;</pre>
+<p><!--CRLF--></div>
+</div>
+<h4>VSDoc Version: </h4>
+<div style="border-bottom: silver 1px solid; text-align: left; border-left: silver 1px solid; padding-bottom: 4px; line-height: 12pt; background-color: #f4f4f4; margin: 20px 0px 10px; padding-left: 4px; width: 97.5%; padding-right: 4px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; max-height: 200px; font-size: 8pt; overflow: auto; border-top: silver 1px solid; cursor: text; border-right: silver 1px solid; padding-top: 4px">
+<div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">&#160;</pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">&lt;script </pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">    src=<span style="color: #006080">&quot;http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.4-vsdoc.js&quot;</span> </pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">    type=<span style="color: #006080">&quot;text/javascript&quot;</span>&gt;</pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">&lt;/script&gt;</pre>
+<p><!--CRLF--><!--CRLF--></div>
+</div>
+<h2>Using jQuery UI from the CDN </h2>
+<div style="border-bottom: silver 1px solid; text-align: left; border-left: silver 1px solid; padding-bottom: 4px; line-height: 12pt; background-color: #f4f4f4; margin: 20px 0px 10px; padding-left: 4px; width: 97.5%; padding-right: 4px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; max-height: 200px; font-size: 8pt; overflow: auto; border-top: silver 1px solid; cursor: text; border-right: silver 1px solid; padding-top: 4px">
+<div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">&lt;script </pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">    src=<span style="color: #006080">&quot;http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.6/jquery-ui.js&quot;</span> </pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">    type=<span style="color: #006080">&quot;text/javascript&quot;</span>&gt;</pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">&lt;/script&gt;</pre>
+<p><!--CRLF--></div>
+</div>
+<h2>Using jQuery UI Themes from the CDN </h2>
+<p>To access jQueryUI themes, along with jquery.js and jquery-ui.js you also need to add reference the corresponding .css file. All of the standard jQuery UI themes are hosted on this CDN</p>
+<div style="border-bottom: silver 1px solid; text-align: left; border-left: silver 1px solid; padding-bottom: 4px; line-height: 12pt; background-color: #f4f4f4; margin: 20px 0px 10px; padding-left: 4px; width: 97.5%; padding-right: 4px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; max-height: 200px; font-size: 8pt; overflow: auto; border-top: silver 1px solid; cursor: text; border-right: silver 1px solid; padding-top: 4px">
+<div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">&lt;link type=<span style="color: #006080">&quot;text/css&quot;</span> rel=<span style="color: #006080">&quot;Stylesheet&quot;</span> </pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">    href=<span style="color: #006080">&quot;http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.6/themes/redmond/jquery-ui.css&quot;</span> /&gt; </pre>
+<p><!--CRLF--></div>
+</div>
+<p>Note: You don't need to host the .css file and the associated images on your server, everything is accessed from the CDN service. Wow… that's gr8.<br />
+  </p>
+<h2>Versions Supported: </h2>
+<p><strong>jQuery:</strong>&#160; 1.4.4, 1.4.3, 1.4.2, 1.4.1, 1.4</p>
+<p><strong>jQuery UI:</strong> 1.8.6, 1.8.5</p>
+<p><strong>Themes:</strong>&#160; All of the standard jQuery UI themes under version 1.8.5 and 1.8.6 are hosted on this CDN</p>
+<p>&#160;</p>
+<h2>Complete Example: </h2>
+<pre style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #fbfbfb; min-height: 40px; padding-left: 5px; width: 550px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #d6d6d6; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">&lt;html xmlns=&quot;<span style="color: #8b0000">http://www.w3.org/1999/xhtml</span>&quot;&gt;
+</pre>
+<pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">&lt;head runat=&quot;<span style="color: #8b0000">server</span>&quot;&gt;
+</pre>
+<pre style="background-color: #d6d6d6; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    &lt;title&gt;Using jQuery UI from the CDN&lt;/title&gt;
+</pre>
+<pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">	&lt;script type=&quot;<span style="color: #8b0000">text/javascript</span>&quot; src=&quot;<span style="color: #8b0000">http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.4.4.js</span>&quot;&gt;&lt;/script&gt;
+</pre>
+<pre style="background-color: #d6d6d6; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    &lt;script type=&quot;<span style="color: #8b0000">text/javascript</span>&quot; src=&quot;<span style="color: #8b0000">http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.6/jquery-ui.js</span>&quot;&gt;&lt;/script&gt;
+</pre>
+<pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    &lt;link type=&quot;<span style="color: #8b0000">text/css</span>&quot; rel=&quot;<span style="color: #8b0000">Stylesheet</span>&quot; href=&quot;<span style="color: #8b0000">http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.6/themes/redmond/jquery-ui.css</span>&quot; /&gt;
+</pre>
+<pre style="background-color: #d6d6d6; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">&lt;/head&gt;
+</pre>
+<pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">&lt;body&gt;
+</pre>
+<pre style="background-color: #d6d6d6; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    &lt;form id=&quot;<span style="color: #8b0000">form1</span>&quot; runat=&quot;<span style="color: #8b0000">server</span>&quot;&gt;
+</pre>
+<pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    &lt;div&gt;
+</pre>
+<pre style="background-color: #d6d6d6; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        &lt;asp:TextBox ID=&quot;<span style="color: #8b0000">txtStartDate</span>&quot; ClientIDMode=&quot;<span style="color: #8b0000">Static</span>&quot; runat=&quot;<span style="color: #8b0000">server</span>&quot; /&gt;
+</pre>
+<pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    &lt;/div&gt;
+</pre>
+<pre style="background-color: #d6d6d6; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    &lt;/form&gt;
+</pre>
+<pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"></pre>
+<pre style="background-color: #d6d6d6; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    &lt;script type=&quot;<span style="color: #8b0000">text/javascript</span>&quot;&gt;
+</pre>
+<pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"></pre>
+<pre style="background-color: #d6d6d6; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        $(&quot;<span style="color: #8b0000">#txtStartDate</span>&quot;).datepicker();
+</pre>
+<pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"></pre>
+<pre style="background-color: #d6d6d6; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    &lt;/script&gt;
+</pre>
+<pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">&lt;/body&gt;
+</pre>
+<pre style="background-color: #d6d6d6; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">&lt;/html&gt;</pre>
+<p>&#160;</p>
+<h2>Related Links</h2></p></p></p>
+<ul>
+<li><a href="http://www.p-bhatt.com/2010/12/using-cdn-hosted-jquery-library.html" target="_blank">Using CDN hosted jQuery Library</a></li>
+<li><a href="http://www.p-bhatt.com/2010/12/using-jquery-scripts-hosted-google.html">Using jQuery Scripts hosted @ Google</a></li>
+<li><a href="http://www.asp.net/ajaxlibrary/cdn.ashx">Microsoft Ajax Content Delivery Network</a></li>
+</ul>
+<ul></ul>
+
+  </div>
+
+</article>
+
+                </div>
+            </div>
+
+          <nav>
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </nav>
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">March 2014</a></li>
+              <li><a href="#">February 2014</a></li>
+              <li><a href="#">January 2014</a></li>
+              <li><a href="#">December 2013</a></li>
+              <li><a href="#">November 2013</a></li>
+              <li><a href="#">October 2013</a></li>
+              <li><a href="#">September 2013</a></li>
+              <li><a href="#">August 2013</a></li>
+              <li><a href="#">July 2013</a></li>
+              <li><a href="#">June 2013</a></li>
+              <li><a href="#">May 2013</a></li>
+              <li><a href="#">April 2013</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+  
+   
+    <div class="row">
+    <div class="container">
+        <div class="AdPlace hidden-xs hidden-sm">
+            <!-- Ad 728x90 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4686631795727964"
+     data-ad-slot="7078321947"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        </div>
+    </div>
+
+</div>
+<div class="foot">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="padd">
+                    <div class="widget"><h3>Learning endeavor for ever…</h3>
+                        <p class="jtxt">Welcome to My Blog! On this site you'll find interesting posts,
+                            articles, tutorials, news updates and links on Microsoft.Net, ASP.NET, MVC, WebAPIs, C#,
+                            Windows8, Metro Apps, WCF, XAML, JavaScript, jQuery, AngularJS, NodeJS, Social Media,
+                            Mobiles, Science &amp; Technology and other random thoughts and opinions.</p>
+                        <p class="pull-right"><i>- Pinal Bhatt</i></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="padd">
+                    <h3>About Me</h3>
+                    <div class="staff">
+                        <div class="">
+                            <a href="#">
+                            <img class="footer-logo img-responsive img-rounded"
+                                                 src="/assets/images/logo/PBDesk/PBDesk.png" alt="PBDesk Logo">
+                            </a>
+                        </div>
+                        <p class="ctxt" style="padding: 10px; font-style: italic">software engineer<br/> and<br/> always on learning ramp</p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="padd">
+                    <div class="widget"><h3>My Sites & Apps</h3>
+                        <ul style="list-style: none;">
+                            <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                            <li><a href="/feed.xml"><i class="fa fa-rss"></i> RSS</a></li>
+                            <li><a href="/SiteMap" target="_blank"><i class="fa fa-sitemap"></i> SiteMap</a></li>
+                            <li><a href="/Disclaimer"><i class="fa fa-warning"></i> Disclaimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="fpadd">Pinal Bhatt's Blog © 2016 | PBDesk.com</div>
+                <div class="fpadd">Concept Design, Develop & Perceived by Pinal Bhatt.</div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </body>
+
+</html>

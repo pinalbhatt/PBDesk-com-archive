@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>.Net Learning Curve</title>
+  <meta name="description" content=" Beginner Level  Foundation Language  C# 3.0VB 9.0-           Variables, Constants, Expressions &amp; Programming Constructs-           DataTypes, Structures...">
+   <meta name="author" content="">
+   
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha256-Ucf/ylcKTNevYP6l7VNUhGLDRZPQs1+LsbbxuzMxUJM= sha512-FW2XqnqMwERwg0LplG7D64h8zA1BsxvxrDseWpHLq8Dg8kOBmLs19XNa9oAajN/ToJRRklfDJ398sOU+7LcjZA==" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/custom.css">
+  <link rel="canonical" href="http://yourdomain.com/blog/programming/net-learning-curve">
+  <link rel="alternate" type="application/rss+xml" title="Pinal Bhatt's Blog" href="http://yourdomain.com/feed.xml">
+  
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+
+  <body>
+
+        <div class="navbar navbar-default navbar-fixed-top topnav-border">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">PBDesk.com</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">This Site <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                <li class="divider"></li>
+                <li><a href="../cerulean/">My Posts</a></li>
+                <li><a href="../cosmo/">Gists</a></li>
+                <li><a href="../cyborg/">eBooks</a></li>
+                <li><a href="../darkly/">Tutorial</a></li>
+                  <li class="divider"></li>
+                  <li><a href="../darkly/">RSS</a></li>
+                  <li><a href="../darkly/">SiteMap</a></li>
+                  <li><a href="../darkly/"> Disclaimer</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">About <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="download">
+                <li><a href="http://jsfiddle.net/bootswatch/9y480qo5/"><i class="fa fa-user"></i> About Me</a></li>
+                  <li><a href="http://jsfiddle.net/bootswatch/9y480qo5/"><i class="fa fa-send"></i> Contact Me</a></li>
+                  <li><a href="http://jsfiddle.net/bootswatch/9y480qo5/"><i class="fa fa-graduation-cap"></i>  My Resume</a></li>
+                <li class="divider"></li>
+                <li class="menuHeadText">Follow Me</li>
+                <li><a href="./bootstrap.min.css"><i class="fa fa-facebook pull-right"></i>Facebook</a></li>
+                  <li><a href="./bootstrap.min.css"><i class="fa fa-twitter pull-right"></i> Twitter</a></li>
+                  <li><a href="./bootstrap.min.css"><i class="fa fa-linkedin pull-right"></i> LinkedIN</a></li>
+                  <li><a href="./bootstrap.min.css"><i class="fa fa-google-plus pull-right"></i> Google+</a></li>
+                  <li><a href="./bootstrap.min.css"><i class="fa fa-github pull-right"></i> Github</a></li>
+
+                <li class="divider"></li>
+                  <li class="menuHeadText">My Other Sites</li>
+                <li><a href="./variables.less">RoKen</a></li>
+                <li><a href="./bootswatch.less">KenKen</a></li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+
+
+        <div class="container">
+
+      
+
+      <div class="row">
+          
+          
+
+        <div class="col-sm-8 blog-main">
+            
+          
+
+            <div class="page-content">
+                <div class="wrapper">
+                    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header" data-spy="affix" data-offset-top="25">
+    <h1 class="post-title"  itemprop="name headline">.Net Learning Curve</h1>
+    <p class="post-meta"><time datetime="2007-12-14T17:31:00-05:00" itemprop="datePublished">Dec 14, 2007</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{"login"=>"pbadmin", "email"=>"pinalbhatt@gmail.com", "display_name"=>"PBDesk Admin", "first_name"=>"Pinal", "last_name"=>"Bhatt"}</span></span></p>
+      <p class="post-meta"><span><a href="/tag/blog">blog</a> </span><span><a href="/tag/Programming">Programming</a> </span></p>
+    <p class="post-meta"></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p style="margin-left: 0.5in;"><o:p> </o:p></p>
+<table style="border: medium none ; width: 6.75in; margin-left: 0pt; border-collapse: collapse;" border="1" cellpadding="0" cellspacing="0" width="648">
+<tbody>
+<tr style="">
+<td colspan="4" style="border: 1pt solid rgb(153, 51, 0); padding: 0in 5.4pt; background: rgb(255, 255, 153) none repeat scroll 0% 50%; width: 6.75in; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" valign="top" width="648">
+<p><b style=""><span style=";font-family:Verdana;font-size:11;">Beginner Level<span style="">  </span><o:p></o:p></span></b></p>
+</td>
+</tr>
+<tr style="">
+<td style="border-style: none solid solid; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0); border-width: medium 1pt 1pt; padding: 0in 5.4pt; background: rgb(204, 255, 204) none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" valign="top">
+<p style="text-align: right;" align="right"><span style=";font-family:Verdana;font-size:11;">Foundation Language<o:p></o:p></span></p>
+</td>
+<td colspan="3" style="border-style: none solid solid none; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0) -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 340.3pt;" valign="top" width="454">
+<p style="text-align: center;" align="center"><span style=";font-family:Verdana;font-size:10;"><o:p> </o:p></span></p>
+</td>
+</tr>
+<tr style="">
+<td rowspan="2" style="border-style: none solid solid; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0); border-width: medium 1pt 1pt; padding: 0in 5.4pt;" valign="top">
+<p style="text-align: right;" align="right"><span style=";font-family:Verdana;font-size:11;"><o:p> </o:p></span></p>
+</td>
+<td colspan="2" style="border-style: none solid solid none; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0) -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; background: rgb(51, 102, 255) none repeat scroll 0% 50%; width: 162.8pt; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" valign="top" width="217">
+<p style="text-align: center;" align="center"><b style=""><span style=";font-family:Tahoma;font-size:11;color:white;">C</span></b><b style=""><span style=";font-family:Tahoma;font-size:10;color:white;">#</span></b><b style=""><span style=";font-family:Tahoma;font-size:11;color:white;"> 3.0<o:p></o:p></span></b></p>
+</td>
+<td style="border-style: none solid solid none; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0) -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; background: rgb(51, 102, 255) none repeat scroll 0% 50%; width: 177.5pt; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" valign="top" width="237">
+<p style="text-align: center;" align="center"><b style=""><span style=";font-family:Tahoma;font-size:11;color:white;">VB 9.0<o:p></o:p></span></b></p>
+</td>
+</tr>
+<tr style="">
+<td colspan="3" style="border-style: none solid solid none; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0) -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 340.3pt;" valign="top" width="454">
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Variables, Constants, Expressions &amp; Programming Constructs<o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">DataTypes, Structures, Enums, <o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Arrays &amp; Collections<o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">OOP – Classes : Fields, Methods, Properties, Constructors,   destructors, indexers, Operators <o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Inheritance &amp; Interfaces<o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:11;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Events &amp; Delegates</span><span style=";font-family:Verdana;font-size:11;"><o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:11;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Namespaces, Partial Classes</span><span style=";font-family:Verdana;font-size:11;"><o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:11;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Exception Handling</span><span style=";font-family:Verdana;font-size:11;"><o:p></o:p></span></p>
+</td>
+</tr>
+<tr style="">
+<td style="border-style: none solid solid; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0); border-width: medium 1pt 1pt; padding: 0in 5.4pt; background: rgb(204, 255, 204) none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" valign="top">
+<p style="text-align: right;" align="right"><span style=";font-family:Verdana;font-size:11;">.Net Fundamentals<o:p></o:p></span></p>
+</td>
+<td colspan="3" style="border-style: none solid solid none; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0) -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; background: rgb(51, 102, 255) none repeat scroll 0% 50%; width: 340.3pt; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" valign="top" width="454">
+<p style="text-align: center;" align="center"><b style=""><span style=";font-family:Tahoma;font-size:11;color:white;">Introduction to .Net Framework<o:p></o:p></span></b></p>
+</td>
+</tr>
+<tr style="">
+<td style="border-style: none solid solid; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0); border-width: medium 1pt 1pt; padding: 0in 5.4pt;" valign="top">
+<p style="text-align: right;" align="right"><span style=";font-family:Verdana;font-size:11;"><o:p> </o:p></span></p>
+</td>
+<td colspan="3" style="border-style: none solid solid none; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0) -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 340.3pt;" valign="top" width="454">
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">CLR, CTS, BCL, Compilation Model<o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">More on collections<o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Assemblies<o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:11;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">ADO.Net</span><span style=";font-family:Verdana;font-size:11;"><o:p></o:p></span></p>
+</td>
+</tr>
+<tr style="">
+<td style="border-style: none solid solid; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0); border-width: medium 1pt 1pt; padding: 0in 5.4pt; background: rgb(204, 255, 204) none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" valign="top">
+<p style="text-align: right;" align="right"><span style=";font-family:Verdana;font-size:11;">Applications<o:p></o:p></span></p>
+</td>
+<td colspan="3" style="border-style: none solid solid none; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0) -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; background: rgb(51, 102, 255) none repeat scroll 0% 50%; width: 340.3pt; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" valign="top" width="454">
+<p style="text-align: center;" align="center"><b style=""><span style=";font-family:Tahoma;font-size:11;color:white;">Windows Applications<o:p></o:p></span></b></p>
+</td>
+</tr>
+<tr style="">
+<td style="border-style: none solid solid; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0); border-width: medium 1pt 1pt; padding: 0in 5.4pt;" valign="top">
+<p><span style=";font-family:Verdana;font-size:11;"><o:p> </o:p></span></p>
+</td>
+<td colspan="3" style="border-style: none solid solid none; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0) -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 340.3pt;" valign="top" width="454">
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Simple Windows &amp; DB Applications covering above topics<o:p></o:p></span></p>
+</td>
+</tr>
+<tr style="">
+<td colspan="4" style="border-style: none solid solid; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0); border-width: medium 1pt 1pt; padding: 0in 5.4pt; background: rgb(255, 255, 153) none repeat scroll 0% 50%; width: 6.75in; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" valign="top" width="648">
+<p><b style=""><span style=";font-family:Verdana;font-size:11;">Intermediate Level <o:p></o:p></span></b></p>
+</td>
+</tr>
+<tr style="">
+<td style="border-style: none solid solid; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0); border-width: medium 1pt 1pt; padding: 0in; background: rgb(204, 255, 204) none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" valign="top">
+<p style="text-align: right;" align="right"><span style=";font-family:Verdana;font-size:11;">.Net Framework<o:p></o:p></span></p>
+</td>
+<td colspan="3" rowspan="2" style="border-style: none solid solid none; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0) -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 340.3pt;" valign="top" width="454">
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Reflection &amp; Attributes<o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Generics<o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">More on ADO.Net<o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">XML &amp; Handling XML in .Net<o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:11;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">COM Interoperability</span><span style=";font-family:Verdana;font-size:11;"> <o:p></o:p></span></p>
+</td>
+</tr>
+<tr style="">
+<td style="border-style: none solid solid; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0); border-width: medium 1pt 1pt; padding: 0in 5.4pt;" valign="top">
+<p style="text-align: right;" align="right"><span style=";font-family:Verdana;font-size:11;"><o:p> </o:p></span></p>
+</td>
+</tr>
+<tr style="">
+<td style="border-style: none solid solid; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0); border-width: medium 1pt 1pt; padding: 0in 5.4pt; background: rgb(204, 255, 204) none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" valign="top">
+<p style="text-align: right;" align="right"><span style=";font-family:Verdana;font-size:11;">Specialization<o:p></o:p></span></p>
+</td>
+<td style="border-style: none solid solid none; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0) -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; background: rgb(51, 102, 255) none repeat scroll 0% 50%; width: 144.8pt; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" valign="top" width="193">
+<p style="text-align: center;" align="center"><b style=""><span style=";font-family:Tahoma;font-size:11;color:white;">Windows Apps<o:p></o:p></span></b></p>
+</td>
+<td colspan="2" style="border-style: none solid solid none; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0) -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; background: rgb(51, 102, 255) none repeat scroll 0% 50%; width: 195.5pt; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" valign="top" width="261">
+<p style="text-align: center;" align="center"><b style=""><span style=";font-family:Tahoma;font-size:11;color:white;">Web Apps<o:p></o:p></span></b></p>
+</td>
+</tr>
+<tr style="">
+<td rowspan="2" style="border-style: none solid solid; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0); border-width: medium 1pt 1pt; padding: 0in 5.4pt;" valign="top">
+<p style="text-align: right;" align="right"><span style=";font-family:Verdana;font-size:11;"><o:p> </o:p></span></p>
+</td>
+<td rowspan="2" style="border-style: none solid solid none; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0) -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 144.8pt;" valign="top" width="193">
+<p><span style=";font-family:Verdana;font-size:10;">Windows   &amp; DB Applications covering above topics</span><span style=";font-family:Verdana;font-size:11;"><o:p></o:p></span></p>
+</td>
+<td colspan="2" style="border-style: none solid solid none; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0) -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 195.5pt;" valign="top" width="261">
+<p style="text-align: center;" align="center"><span style=";font-family:Verdana;font-size:10;">Prereq: HTML, JavaScript, CSS +   all topics listed in Beginner Level.<o:p></o:p></span></p>
+</td>
+</tr>
+<tr style="">
+<td colspan="2" style="border-style: none solid solid none; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0) -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 195.5pt;" valign="top" width="261">
+<p style="text-align: center;" align="center"><span style=";font-family:Verdana;font-size:10;">Refer to Specialized Training on   ASP.Net <o:p></o:p></span></p>
+</td>
+</tr>
+<tr style="">
+<td colspan="4" style="border-style: none solid solid; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0); border-width: medium 1pt 1pt; padding: 0in 5.4pt; background: rgb(255, 255, 153) none repeat scroll 0% 50%; width: 6.75in; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" valign="top" width="648">
+<p><b style=""><span style=";font-family:Verdana;font-size:11;">Advanced Level <o:p></o:p></span></b></p>
+</td>
+</tr>
+<tr style="">
+<td style="border-style: none solid solid; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0); border-width: medium 1pt 1pt; padding: 0in 5.4pt; background: rgb(204, 255, 204) none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" valign="top">
+<p style="text-align: right;" align="right"><span style=";font-family:Verdana;font-size:11;">.Net Framework<o:p></o:p></span></p>
+</td>
+<td colspan="3" rowspan="2" style="border-style: none solid solid none; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0) -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 340.3pt;" valign="top" width="454">
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Threading<o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Security<o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Remoting<o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Windows Services<o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">LINQ<o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:10;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Application Domains<o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:11;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Packaging &amp; Deployment</span><span style=";font-family:Verdana;font-size:11;"><o:p></o:p></span></p>
+<p style="margin-left: 0.25in; text-indent: -0.25in;"><span style=";font-family:Verdana;font-size:11;"><span style="">-<span style="">           </span></span></span><span style=";font-family:Verdana;font-size:10;">Introduction to Design Patterns</span><span style=";font-family:Verdana;font-size:11;"><o:p></o:p></span></p>
+</td>
+</tr>
+<tr style="">
+<td style="border-style: none solid solid; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0); border-width: medium 1pt 1pt; padding: 0in 5.4pt;" valign="top">
+<p style="text-align: right;" align="right"><span style=";font-family:Verdana;font-size:11;"><o:p> </o:p></span></p>
+</td>
+</tr>
+<tr style="">
+<td colspan="4" style="border-style: none solid solid; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0); border-width: medium 1pt 1pt; padding: 0in 5.4pt; background: rgb(255, 255, 153) none repeat scroll 0% 50%; width: 6.75in; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" valign="top" width="648">
+<p><b style=""><span style=";font-family:Verdana;font-size:11;">Specialized Training<o:p></o:p></span></b></p>
+</td>
+</tr>
+<tr style="">
+<td style="border-style: none solid solid; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0); border-width: medium 1pt 1pt; padding: 0in 5.4pt;" valign="top">
+<p style="text-align: right;" align="right"><span style=";font-family:Verdana;font-size:10;"><o:p> </o:p></span></p>
+</td>
+<td colspan="3" style="border-style: none solid solid none; border-color: -moz-use-text-color rgb(153, 51, 0) rgb(153, 51, 0) -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 340.3pt;" valign="top" width="454">
+<p><span style=";font-family:Verdana;font-size:10;">ASP.Net<o:p></o:p></span></p>
+<p><span style=";font-family:Verdana;font-size:10;">XAML   &amp; WPF (Basics)<o:p></o:p></span></p>
+<p><span style=";font-family:Verdana;font-size:10;">WWF<o:p></o:p></span></p>
+<p><span style=";font-family:Verdana;font-size:10;">WCF<o:p></o:p></span></p>
+<p><span style=";font-family:Verdana;font-size:10;">Design   Patterns</span><span style=";font-family:Verdana;font-size:11;"><o:p></o:p></span></p>
+</td>
+</tr>
+<tr height="0">
+<td style="border: medium none ;" width="179">
+</td>
+<td style="border: medium none ;" width="199">
+</td>
+<td style="border: medium none ;" width="25">
+</td>
+<td style="border: medium none ;" width="245">
+</td>
+</tr>
+</tbody>
+</table>
+<p><o:p> </o:p></p>
+
+  </div>
+
+</article>
+
+                </div>
+            </div>
+
+          <nav>
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </nav>
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">March 2014</a></li>
+              <li><a href="#">February 2014</a></li>
+              <li><a href="#">January 2014</a></li>
+              <li><a href="#">December 2013</a></li>
+              <li><a href="#">November 2013</a></li>
+              <li><a href="#">October 2013</a></li>
+              <li><a href="#">September 2013</a></li>
+              <li><a href="#">August 2013</a></li>
+              <li><a href="#">July 2013</a></li>
+              <li><a href="#">June 2013</a></li>
+              <li><a href="#">May 2013</a></li>
+              <li><a href="#">April 2013</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+  
+   
+    <div class="row">
+    <div class="container">
+        <div class="AdPlace hidden-xs hidden-sm">
+            <!-- Ad 728x90 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4686631795727964"
+     data-ad-slot="7078321947"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        </div>
+    </div>
+
+</div>
+<div class="foot">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="padd">
+                    <div class="widget"><h3>Learning endeavor for ever…</h3>
+                        <p class="jtxt">Welcome to My Blog! On this site you'll find interesting posts,
+                            articles, tutorials, news updates and links on Microsoft.Net, ASP.NET, MVC, WebAPIs, C#,
+                            Windows8, Metro Apps, WCF, XAML, JavaScript, jQuery, AngularJS, NodeJS, Social Media,
+                            Mobiles, Science &amp; Technology and other random thoughts and opinions.</p>
+                        <p class="pull-right"><i>- Pinal Bhatt</i></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="padd">
+                    <h3>About Me</h3>
+                    <div class="staff">
+                        <div class="">
+                            <a href="#">
+                            <img class="footer-logo img-responsive img-rounded"
+                                                 src="/assets/images/logo/PBDesk/PBDesk.png" alt="PBDesk Logo">
+                            </a>
+                        </div>
+                        <p class="ctxt" style="padding: 10px; font-style: italic">software engineer<br/> and<br/> always on learning ramp</p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="padd">
+                    <div class="widget"><h3>My Sites & Apps</h3>
+                        <ul style="list-style: none;">
+                            <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                            <li><a href="/feed.xml"><i class="fa fa-rss"></i> RSS</a></li>
+                            <li><a href="/SiteMap" target="_blank"><i class="fa fa-sitemap"></i> SiteMap</a></li>
+                            <li><a href="/Disclaimer"><i class="fa fa-warning"></i> Disclaimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="fpadd">Pinal Bhatt's Blog © 2016 | PBDesk.com</div>
+                <div class="fpadd">Concept Design, Develop & Perceived by Pinal Bhatt.</div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </body>
+
+</html>

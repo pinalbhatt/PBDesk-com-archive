@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Razor support in Umbraco</title>
+  <meta name="description" content="Important Note!!!This post was written for Umbraco 4.6.1. Now new version 4.7 is available and there are certain notable changes in terms of Razor in Umbraco...">
+   <meta name="author" content="">
+   
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha256-Ucf/ylcKTNevYP6l7VNUhGLDRZPQs1+LsbbxuzMxUJM= sha512-FW2XqnqMwERwg0LplG7D64h8zA1BsxvxrDseWpHLq8Dg8kOBmLs19XNa9oAajN/ToJRRklfDJ398sOU+7LcjZA==" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/custom.css">
+  <link rel="canonical" href="http://yourdomain.com/blog/cms/razor-support-in-umbraco">
+  <link rel="alternate" type="application/rss+xml" title="Pinal Bhatt's Blog" href="http://yourdomain.com/feed.xml">
+  
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+
+  <body>
+
+        <div class="navbar navbar-default navbar-fixed-top topnav-border">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">PBDesk.com</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">This Site <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                <li class="divider"></li>
+                <li><a href="../cerulean/">My Posts</a></li>
+                <li><a href="../cosmo/">Gists</a></li>
+                <li><a href="../cyborg/">eBooks</a></li>
+                <li><a href="../darkly/">Tutorial</a></li>
+                  <li class="divider"></li>
+                  <li><a href="../darkly/">RSS</a></li>
+                  <li><a href="../darkly/">SiteMap</a></li>
+                  <li><a href="../darkly/"> Disclaimer</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">About <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="download">
+                <li><a href="http://jsfiddle.net/bootswatch/9y480qo5/"><i class="fa fa-user"></i> About Me</a></li>
+                  <li><a href="http://jsfiddle.net/bootswatch/9y480qo5/"><i class="fa fa-send"></i> Contact Me</a></li>
+                  <li><a href="http://jsfiddle.net/bootswatch/9y480qo5/"><i class="fa fa-graduation-cap"></i>  My Resume</a></li>
+                <li class="divider"></li>
+                <li class="menuHeadText">Follow Me</li>
+                <li><a href="./bootstrap.min.css"><i class="fa fa-facebook pull-right"></i>Facebook</a></li>
+                  <li><a href="./bootstrap.min.css"><i class="fa fa-twitter pull-right"></i> Twitter</a></li>
+                  <li><a href="./bootstrap.min.css"><i class="fa fa-linkedin pull-right"></i> LinkedIN</a></li>
+                  <li><a href="./bootstrap.min.css"><i class="fa fa-google-plus pull-right"></i> Google+</a></li>
+                  <li><a href="./bootstrap.min.css"><i class="fa fa-github pull-right"></i> Github</a></li>
+
+                <li class="divider"></li>
+                  <li class="menuHeadText">My Other Sites</li>
+                <li><a href="./variables.less">RoKen</a></li>
+                <li><a href="./bootswatch.less">KenKen</a></li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+
+
+        <div class="container">
+
+      
+
+      <div class="row">
+          
+          
+
+        <div class="col-sm-8 blog-main">
+            
+          
+
+            <div class="page-content">
+                <div class="wrapper">
+                    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header" data-spy="affix" data-offset-top="25">
+    <h1 class="post-title"  itemprop="name headline">Razor support in Umbraco</h1>
+    <p class="post-meta"><time datetime="2011-01-25T12:51:00-05:00" itemprop="datePublished">Jan 25, 2011</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{"login"=>"pbadmin", "email"=>"pinalbhatt@gmail.com", "display_name"=>"PBDesk Admin", "first_name"=>"Pinal", "last_name"=>"Bhatt"}</span></span></p>
+      <p class="post-meta"><span><a href="/tag/blog">blog</a> </span><span><a href="/tag/CMS">CMS</a> </span></p>
+    <p class="post-meta"></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <div>
+<div>Important Note!!!</div>
+<div>
+<p>This post was written for Umbraco 4.6.1. Now new version 4.7 is available and there are certain notable changes in terms of Razor in Umbraco 4.7. Please refer to my another post “<a href="http://blog.pbdesk.com/2011/03/razor-support-in-umbraco-47.html" target="_blank">Razor support in Umbraco 4.7</a>” for changes and new features in Umbraco 4.7 </p>
+</p></div>
+</p></div>
+<p align="justify">On Jan 12, 2011, Umbraco team released new version 4.6.1 for Umbraco CMS engine and one of the great feature they added was the support for Razor syntax.&#160; Yes, Umbraco now supports Razor syntax. And for those guys, including me, who dislike XSLTs, this is a great alternate for them.&#160; Now we can write the logic in C# rather then in XSLT. Thanks Umbraco Team!!!. </p>
+<p align="justify">Razor is tbe view engine introduced by Microsoft team with ASP.Net MVC 3.0. It is optimized around HTML generation using a code-focused templating approach. To know more about Razor, following links may be useful: </p>
+<ul>
+<li><a href="http://weblogs.asp.net/scottgu/archive/2010/07/02/introducing-razor.aspx" target="_blank">ScottGu's Blog Post: Introducing “Razor” – a new view engine for ASP.NET</a> </li>
+<li><a href="http://www.asp.net/webmatrix/tutorials/2-introduction-to-asp-net-web-programming-using-the-razor-syntax" target="_blank">Introduction to ASP.NET Web Programming Using the Razor Syntax</a> </li>
+</ul>
+<p align="justify">With Umbraco 4.6, developers can use Razor syntax in Umbraco components. So now Umbraco CMS engine allows <strong><em>Razor scripts</em></strong> to be used in the same way we have been using Iron* languages, XSLT or .NET controls... as a macro. This means that you can use Razor just as you would any other language option. In short, now we can write razor scripts and associate them with Macros. </p>
+<p align="justify">&#160;</p>
+<h2>Creating Razor scripts in Umbraco </h2>
+<p>These script files will have extension &quot;.razor&quot; and by default will live in /python folder besides Iron* files. Razor scripts can be created just like you create any other DLR script file in the Umbraco back office. <img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; margin-left: 0px; border-left-width: 0px; margin-right: 0px" title="Razor1" border="0" alt="Razor1" align="right" src="assets/Razor1-5B7-5D.jpg" width="244" height="203" /></p>
+<ul>
+<li>Go to &quot;Developers&quot; section </li>
+</ul>
+<p>&#160;</p>
+<ul>
+<li>Right click at &quot;Scripting Files&quot;, select &quot;Create&quot; </li>
+</ul>
+<p>&#160;</p>
+<ul>
+<li>In Create dialog box, select language as &quot;Razor by Razor Engine&quot; from the dropdown.      <br />&#160; <a href="http://blog.pbdesk.com/wp-content/uploads/2011/01/Razor2_thumb-5B4-5D.jpg"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="Razor2" border="0" alt="Razor2" src="assets/Razor2_thumb-5B4-5D-300x272.jpg" width="376" height="342" /></a>&#160; </li>
+<li>Fill in other fields appropriately and click &quot;Create&quot;&#160;&#160; button </li>
+<li>This will bring up the editor for script. </li>
+</ul>
+<h2>First Razor For Umbraco : Hello, World!</h2>
+<p> 
+<div style="border-bottom: silver 1px solid; text-align: left; border-left: silver 1px solid; padding-bottom: 4px; line-height: 12pt; background-color: #f4f4f4; margin: 20px 0px 10px; padding-left: 4px; width: 97.5%; padding-right: 4px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; max-height: 200px; font-size: 8pt; overflow: auto; border-top: silver 1px solid; cursor: text; border-right: silver 1px solid; padding-top: 4px">
+<div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"><span style="color: #0000ff">&lt;</span><span style="color: #800000">div</span><span style="color: #0000ff">&gt;</span></pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">  <span style="color: #0000ff">&lt;</span><span style="color: #800000">p</span><span style="color: #0000ff">&gt;</span>Hello, World!<span style="color: #0000ff">&lt;/</span><span style="color: #800000">p</span><span style="color: #0000ff">&gt;</span></pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">  <span style="color: #0000ff">&lt;</span><span style="color: #800000">p</span><span style="color: #0000ff">&gt;</span>Current Page: @Model.Name<span style="color: #0000ff">&lt;</span><span style="color: #800000">p</span><span style="color: #0000ff">&gt;</span></pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">  <span style="color: #0000ff">&lt;</span><span style="color: #800000">p</span><span style="color: #0000ff">&gt;</span>@Model.bodyText<span style="color: #0000ff">&lt;/</span><span style="color: #800000">p</span><span style="color: #0000ff">&gt;</span></pre>
+<p><!--CRLF--></p>
+<pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"><span style="color: #0000ff">&lt;/</span><span style="color: #800000">div</span><span style="color: #0000ff">&gt;</span></pre>
+<p><!--CRLF--></div>
+</div>
+<p><em>[Assuming&#160; &quot;bodyText&quot; is a property in associated document type.]</em> </p>
+<p>Rest is simple, as usual, create an Macor and associate it with the above created script file.<br />
+  <br /><a href="http://blog.pbdesk.com/wp-content/uploads/2011/01/image_thumb-5B11-5D.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="assets/image_thumb-5B11-5D-300x166.png" width="482" height="269" /></a>&#160;&#160;&#160;&#160; </p>
+<h2>Model object</h2>
+<p></p>
+<p>Just like Iron* scripts, Razor scripts also have a &quot;<strong><em>Model</em></strong>&quot;&#160;&#160;&#160; object available in them which is equivelent to the &quot;<strong><em>currentPage</em></strong>&quot; parameter available in XSLT. Its of the type umbraco.MacroEngines.DynamicNode and can be used in the script to access currentPage node and data associated with it. </p>
+<h2>Important Links:</h2>
+<ul>
+<li><a href="http://www.aaron-powell.com/umbraco-4-and-razor" target="_blank">LINQ to Fail: Using Razor in Umbraco 4</a> </li>
+<li><a href="http://umbraco.org/help-and-support/video-tutorials/getting-started/working-with-webmatrix" target="_blank">Umbraco from WebMatrix</a> </li>
+<li><a href="http://blog.pbdesk.com/umbraco-razor-syntax-for-breadcrumb.html">Umbraco Razor Syntax for Breadcrumb</a> </li>
+<li><a href="http://blog.pbdesk.com/canonical-url-for-umbraco-using-razor.html">Canonical Url For Umbraco Using Razor Syntax</a> </li>
+<li>Umbraco Razor Syntax : Code Snippets </li>
+<li>Umbraco Downloads </li>
+<li><a href="http://joeriks.wordpress.com/2011/01/04/playing-with-razor-in-umbraco-an-old-skool-contact-form/" target="_blank">Playing with Razor in Umbraco</a>
+<p></li>
+</ul>
+
+  </div>
+
+</article>
+
+                </div>
+            </div>
+
+          <nav>
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </nav>
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">March 2014</a></li>
+              <li><a href="#">February 2014</a></li>
+              <li><a href="#">January 2014</a></li>
+              <li><a href="#">December 2013</a></li>
+              <li><a href="#">November 2013</a></li>
+              <li><a href="#">October 2013</a></li>
+              <li><a href="#">September 2013</a></li>
+              <li><a href="#">August 2013</a></li>
+              <li><a href="#">July 2013</a></li>
+              <li><a href="#">June 2013</a></li>
+              <li><a href="#">May 2013</a></li>
+              <li><a href="#">April 2013</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+  
+   
+    <div class="row">
+    <div class="container">
+        <div class="AdPlace hidden-xs hidden-sm">
+            <!-- Ad 728x90 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4686631795727964"
+     data-ad-slot="7078321947"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        </div>
+    </div>
+
+</div>
+<div class="foot">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="padd">
+                    <div class="widget"><h3>Learning endeavor for ever…</h3>
+                        <p class="jtxt">Welcome to My Blog! On this site you'll find interesting posts,
+                            articles, tutorials, news updates and links on Microsoft.Net, ASP.NET, MVC, WebAPIs, C#,
+                            Windows8, Metro Apps, WCF, XAML, JavaScript, jQuery, AngularJS, NodeJS, Social Media,
+                            Mobiles, Science &amp; Technology and other random thoughts and opinions.</p>
+                        <p class="pull-right"><i>- Pinal Bhatt</i></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="padd">
+                    <h3>About Me</h3>
+                    <div class="staff">
+                        <div class="">
+                            <a href="#">
+                            <img class="footer-logo img-responsive img-rounded"
+                                                 src="/assets/images/logo/PBDesk/PBDesk.png" alt="PBDesk Logo">
+                            </a>
+                        </div>
+                        <p class="ctxt" style="padding: 10px; font-style: italic">software engineer<br/> and<br/> always on learning ramp</p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="padd">
+                    <div class="widget"><h3>My Sites & Apps</h3>
+                        <ul style="list-style: none;">
+                            <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                            <li><a href="/feed.xml"><i class="fa fa-rss"></i> RSS</a></li>
+                            <li><a href="/SiteMap" target="_blank"><i class="fa fa-sitemap"></i> SiteMap</a></li>
+                            <li><a href="/Disclaimer"><i class="fa fa-warning"></i> Disclaimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="fpadd">Pinal Bhatt's Blog © 2016 | PBDesk.com</div>
+                <div class="fpadd">Concept Design, Develop & Perceived by Pinal Bhatt.</div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </body>
+
+</html>
