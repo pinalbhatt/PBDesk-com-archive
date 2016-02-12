@@ -18,8 +18,6 @@
 
                 {% include material/widgets/aboutMeSidebar.html %}
 
-                {% include material/widgets/sideBarW1.html %}
-
                 {% include material/widgets/sideBarW2.html %}
 
                 {% include material/widgets/sideBarW3.html %}
@@ -39,11 +37,15 @@
                         </div>
                     </div>
                 </div>
+
+                {% include material/widgets/sideBarW1.html %}
             </div>
         </aside>
         <section class="col s12 m12 l8 section">
             <div class="row">
                 {{ content }}
+                {% include material/widgets/R1Add.html %}
+                {% include material/footer.html %}
             </div>
         </section>
     </div>

@@ -98,3 +98,64 @@ ul#footer-menu li:before {
 ul#footer-menu li a:hover {
     color: #000000;
 }
+
+.sidebar .aboutMe {
+    margin-bottom: 20px;
+}
+
+.sidebar .aboutMe h4 {
+    margin: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000;
+    letter-spacing: 1px;
+}
+
+.sidebar .aboutMe h4 a:hover{
+    color: #cccccc;
+}
+
+.breadcrumb {
+    font-size: 14px;
+
+}
+
+.breadcrumb i,
+.breadcrumb [class^="mdi-"], .breadcrumb [class*="mdi-"],
+.breadcrumb i.material-icons {
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+}
+
+.breadcrumb:before {
+    content: ' > ';
+
+    vertical-align: top;
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 15px;
+    margin: 0 10px 0 8px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.breadcrumb:first-child:before {
+    display: none;
+}
+
+.breadcrumb:last-child {
+    color: #000;
+    display: inline !important;
+}
+
+.breadcrumb a {
+    color: #767270 !important; //theme color
+}
+.breadcrumb a:hover {
+    color: #000 !important;
+}
+.breadcrumbDiv {
+    background-color: #1abc9c; //theme color
+}
