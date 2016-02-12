@@ -159,3 +159,9 @@ ul#footer-menu li a:hover {
 .breadcrumbDiv {
     background-color: #1abc9c; //theme color
 }
+
+.custom-content .fa {
+    text-align: inherit;
+    display: inline;
+    font-size: 14px;
+}

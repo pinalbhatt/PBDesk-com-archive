@@ -1,7 +1,45 @@
 ---
-layout: layoutPosts1
+layout: material/baseLayout
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="section-wrapper z-depth-1">
+  <div class="custom-content col s12 m12 l12 wow fadeIn a1 breadcrumbDiv" data-wow-delay="0.1s" >
+
+    <div class="col s12 ">
+      <a href="#!" class="breadcrumb">Home</a>
+      <a href="#!" class="breadcrumb">Second</a>
+      <div  class="breadcrumb">SiteMap</div>
+    </div>
+
+  </div>
+  <div class="section-icon col s12 m12 l2 hide-on-med-and-down">
+    <i class="fa fa-file-text-o"></i>
+  </div>
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+
+  <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s" >
+      <div class="post-meta-cat">{% for cat in page.categories %}<span><a class="a-c" href="/tag/{{cat}}">{{cat}}</a> </span>{% endfor %}</div>
+    <h2 style="margin-top:10px">{{ page.title }} </h2>
+
+    <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s" >
+      <span><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> </span>
+        <div class="post-meta-tag"><i class="fa fa-tags"></i> {% for tag in page.tags %}<span class=""><a class="a-c" href="/tag/{{tag}}">{{tag}}</a> </span>{% endfor %}</div>
+    </div>
+    <div class="custom-content-wrapper wow fadeIn a3" data-wow-delay="0.3s" >
+
+        {{ content }}
+    </div>
+
+  </div>
+    </article>
+</div>
+
+<section class="col s12 m12 l8 section">
+  <div class="row">
+
+  </div>
+</section>
+<!--<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header" data-spy="affix" data-offset-top="25">
     <h1 class="post-title"  itemprop="name headline">{{ page.title }}</h1>
@@ -14,4 +52,4 @@ layout: layoutPosts1
     {{ content }}
   </div>
 
-</article>
+</article>-->
