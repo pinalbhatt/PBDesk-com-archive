@@ -1,3 +1,9 @@
+/*
+theme colors
+green(767270)
+green (1abc9c) red(e74c3c)
+*/
+
 .social {
     margin-top: 15px;
     margin-bottom: 10px;
@@ -157,7 +163,7 @@ ul#footer-menu li a:hover {
     color: #000 !important;
 }
 .breadcrumbDiv {
-    background-color: #1abc9c; //theme color
+    background-color: #e74c3c; //theme color green (1abc9c) red(#e74c3c)
 }
 
 .custom-content .fa {
