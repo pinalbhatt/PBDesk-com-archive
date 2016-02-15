@@ -11,16 +11,11 @@ green (1abc9c) red(e74c3c)
 
 .social a i {
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-    line-height: 40px;
     text-decoration: none;
     text-align: center;
     color: #fff;
     -webkit-transition: all 1.5s ease;
     transition: all 1.5s ease;
-
     width: 30px;
     height: 30px;
     margin-right: 2px;
@@ -28,6 +23,22 @@ green (1abc9c) red(e74c3c)
     font-size: 12px;
     line-height: 30px;
     border-radius: 50px;
+}
+
+.social1 a i {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    -webkit-transition: all 1.5s ease;
+    transition: all 1.5s ease;
+    text-shadow: 1px 1px 5px #000;
+    width: 25px;
+    height: 25px;
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 
@@ -53,7 +64,10 @@ green (1abc9c) red(e74c3c)
 .social a.rss i{
     background:#FA9B39;
 }
-
+.social1 a:hover i{
+    color: #000000;
+    text-shadow: 1px 1px 1px #ffffff;
+}
 .social a:hover i{
     background:#000;
 }
@@ -111,9 +125,9 @@ ul#footer-menu li a:hover {
 
 .sidebar .aboutMe h4 {
     margin: 0px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: 1px 1px 5px #000;
     letter-spacing: 1px;
 }
 

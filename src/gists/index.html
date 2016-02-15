@@ -1,10 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+---
+layout: material/baseLayout
+sections:
+    featured:
+        <div class="col m12 s12 l9 info wow fadeIn a2" data-wow-delay="0.2s" >
+            <div class="section-item-details">
+                <div class="personal">
+                    <h4><a href="tel:555-555-5555">(111)-333-4444</a></h4> <!-- Number -->
+                    <span>mobile</span>
+                </div>
+                <div class="work">
+                    <h4><a href="tel:555-555-5555">(121)-323-3494</a></h4> <!-- Number -->
+                    <span>work</span>
+                </div>
+            </div>
+        </div>
+---
 
-</body>
-</html>
+<div class="section-wrapper z-depth-1">
+    <div class="custom-content col s12 m12 l12 wow fadeIn a1 breadcrumbDiv" data-wow-delay="0.1s" >
+
+        <div class="col s12 ">
+            <a href="#!" class="breadcrumb">Home</a>
+            <a href="#!" class="breadcrumb">Second</a>
+            <div  class="breadcrumb">SiteMap</div>
+        </div>
+
+    </div>
+    <div class="section-icon col s12 m12 l2 hide-on-med-and-down">
+        <i class="fa fa-file-code-o"></i>
+    </div>
+    <div class="custom-content col s10 m10 l10 offset-s1 offset-m1 wow fadeIn a1" data-wow-delay="0.1s">
+        <h2>Welcome</h2>
+
+        <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s" style="margin-top: 25px">
+
+            <p>Hi Everyone! I'm Pinal Bhatt and Welcome to My Desk! On this site you'll find interesting posts, articles, tutorials, news updates and links on Microsoft.Net, ASP.NET, MVC, WebAPIs, C#, VB.Net, Silverlight, WPF, Windows8, Metro Apps, WCF, XAML, JavaScript, jQuery, AngularJS, NodeJS, MongoDB, Mocha,Design Patterns, Social Media, Mobiles, Science & Technology and other random thoughts and opinions.</p>
+            <p>I created this site to narrate my coding and technology learning experiences. I like sharing my experiments, ideas and experience with everyone by writing articles on latest technological trends. I feel pleased and pride by sharing my knowledge and information that I have gained via Internet. And this site is my heartily attempt towards this.</p>
+        </div>
+        <div class="custom-content-wrapper wow fadeIn a3" data-wow-delay="0.3s">
+            <h3><a href="/ebooks" class="a-c">eBooks</a></h3>
+            <p>one of the basic source of Knowledge in digital format</p>
+        </div>
+        <div class="custom-content-wrapper wow fadeIn a3" data-wow-delay="0.3s">
+            <h3><a href="/gists" class="a-c">Gists</a></h3>
+            <p>Sharing Code Snippets</p>
+        </div>
+        <div class="custom-content-wrapper wow fadeIn a4" data-wow-delay="0.4s">
+            <h3><a href="/tutorials" class="a-c">Tutorials</a></h3>
+
+            <p>free online tutorials and videos for self learning </p>
+        </div>
+    </div>
+</div>
+<div class="section-wrapper z-depth-1">
+    <div class="section-icon col s12 m12 l2">
+        <i class="fa fa-file-text-o"></i>
+    </div>
+    <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s" >
+        <h2>Featured Posts </h2>
+
+        {% for post in site.posts %}
+        {% if post.featured == true  %}
+        <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s" >
+            <h3><a class="a-c" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+            <span>{{ post.date | date: "%b %-d, %Y" }} </span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s" >
+            <div><a class="a-c pull-right" href="{{ post.url | prepend: site.baseurl }}">...More.. <i class="fa fa-arrow-circle-right"></i></a></div>
+        </div>
+    </div>
+</div>
