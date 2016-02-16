@@ -1,7 +1,7 @@
 ---
 layout: material/baseLayout
-title: Gists
-gatewayIcon: fa-file-code-o
+title: My Posts
+gatewayIcon: fa-file-o
 sections:
     breadCrumb:
         <div class="custom-content col s12 m12 l12 wow fadeIn a1 breadcrumbDiv" data-wow-delay="0.1s" >
@@ -53,5 +53,29 @@ sections:
 
     </div>
 
+</div>
+
+<div class="section-wrapper z-depth-1">
+    <div class="section-icon col s12 m12 l2">
+        <i class="fa fa-file-text-o"></i>
+    </div>
+    <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s" >
+        <h2>Featured Posts </h2>
+
+        {% for post in site.posts %}
+        {% if post.categories[0] == "blog"  %}
+        <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s" >
+            <h3><a class="a-c" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+            <span>{{ post.date | date: "%b %-d, %Y" }} </span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            <p>{{post.categories[0]}}</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s" >
+            <div><a class="a-c pull-right" href="{{ post.url | prepend: site.baseurl }}">...More.. <i class="fa fa-arrow-circle-right"></i></a></div>
+        </div>
+    </div>
 </div>
 
