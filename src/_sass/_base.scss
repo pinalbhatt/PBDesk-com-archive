@@ -1,206 +1,194 @@
-/**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
-}
 
 
 
-/**
- * Basic styling
- */
-body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-feature-settings: "kern" 1;
-    -moz-font-feature-settings: "kern" 1;
-    -o-font-feature-settings: "kern" 1;
-    font-feature-settings: "kern" 1;
-    font-kerning: normal;
-}
-
-
-
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
 %vertical-rhythm {
     margin-bottom: $spacing-unit / 2;
 }
 
+/*
+theme colors
+green(767270)
+green (1abc9c) red(e74c3c)
+*/
 
-
-/**
- * Images
- */
-img {
-    max-width: 100%;
-    vertical-align: middle;
+.social {
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
-
-
-/**
- * Figures
- */
-figure > img {
-    display: block;
-}
-
-figcaption {
-    font-size: $small-font-size;
-}
-
-
-
-/**
- * Lists
- */
-ul, ol {
-    margin-left: $spacing-unit;
-}
-
-li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
-}
-
-
-
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
-}
-
-
-
-/**
- * Links
- */
-a {
-    color: $brand-color;
+.social a i {
+    display: inline-block;
     text-decoration: none;
+    text-align: center;
+    color: #fff;
+    -webkit-transition: all 1.5s ease;
+    transition: all 1.5s ease;
+    width: 30px;
+    height: 30px;
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 12px;
+    line-height: 30px;
+    border-radius: 50px;
+}
 
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
-
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
-    }
+.social1 a i {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    -webkit-transition: all 1.5s ease;
+    transition: all 1.5s ease;
+    text-shadow: 1px 1px 5px #000;
+    width: 25px;
+    height: 25px;
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 
-
-/**
- * Blockquotes
- */
-blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
-
-    > :last-child {
-        margin-bottom: 0;
-    }
+.social a.facebook i{
+    background:#1e78ae;
 }
 
+.social a.twitter i{
+    background:#1ba1e2;
+}
 
+.social a.google-plus i{
+    background:#f22d0c;
+}
 
-/**
- * Code formatting
- */
-pre,
-code {
+.social a.linkedin i{
+    background:#2d93cf;
+}
+
+.social a.github i{
+    background:#dd1617;
+}
+.social a.rss i{
+    background:#FA9B39;
+}
+.social1 a:hover i{
+    color: #000000;
+    text-shadow: 1px 1px 1px #ffffff;
+}
+.social a:hover i{
+    background:#000;
+}
+
+.jtxt {
+    text-align: justify;
+}
+.ctxt{
+    text-align: center;
+}
+
+.a-c{
+    color: #767270 !important; //theme color
+}
+
+.a-c:hover{
+    color: #000000;
+}
+
+.a-c .fa {
+    text-align: inherit !important;
+    display: inline;
+    font-size: inherit;
+}
+.fpadd{
+    color: #000;
+}
+
+ul#footer-menu li {
+    display: inline;
+}
+
+ul#footer-menu li a {
+    color: #767270 !important; //theme color
+    padding: 10px 20px;
+    text-decoration: none;
+}
+ul#footer-menu li:first-child:before {
+    content: none;
+
+}
+
+ul#footer-menu li:before {
+    content: ' | ';
+    margin: 0 10px 0 8px;
+}
+
+ul#footer-menu li a:hover {
+    color: #000000;
+}
+
+.sidebar .aboutMe {
+    margin-bottom: 20px;
+}
+
+.sidebar .aboutMe h4 {
+    margin: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px #000;
+    letter-spacing: 1px;
+}
+
+.sidebar .aboutMe h4 a:hover{
+    color: #cccccc;
+}
+
+.breadcrumb {
+    font-size: 14px;
+
+}
+
+.breadcrumb i,
+.breadcrumb [class^="mdi-"], .breadcrumb [class*="mdi-"],
+.breadcrumb i.material-icons {
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+}
+
+.breadcrumb:before {
+    content: ' > ';
+
+    vertical-align: top;
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
     font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+    margin: 0 10px 0 8px;
+    -webkit-font-smoothing: antialiased;
 }
 
-code {
-    padding: 1px 5px;
+.breadcrumb:first-child:before {
+    display: none;
 }
 
-pre {
-    padding: 8px 12px;
-    overflow-x: auto;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+.breadcrumb:last-child {
+    color: #000;
+    display: inline !important;
 }
 
-
-
-/**
- * Wrapper
- */
-.wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
+.breadcrumb a {
+    color: #767270 !important; //theme color
+}
+.breadcrumb a:hover {
+    color: #000 !important;
+}
+.breadcrumbDiv {
+    background-color: $themeMain; //theme color green (1abc9c) red(#e74c3c)
 }
 
-
-
-/**
- * Clearfix
- */
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-
-
-/**
- * Icons
- */
-.icon {
-
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-
-        path {
-            fill: $grey-color;
-        }
-    }
+.custom-content .fa {
+    text-align: inherit;
+    display: inline;
+    font-size: 14px;
 }
