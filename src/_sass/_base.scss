@@ -11,6 +11,12 @@ green(767270)
 green (1abc9c) red(e74c3c)
 */
 
+.sidebar-item a{
+  color: #ffffff;
+}
+a {
+  color: #000000;
+}
 .social {
     margin-top: 15px;
     margin-bottom: 10px;
@@ -139,7 +145,8 @@ ul#footer-menu li a:hover {
 }
 
 .sidebar .aboutMe h4 a:hover{
-    color: #cccccc;
+    color: #000000;
+  text-shadow: 1px 1px 5px #ffffff;
 }
 
 .breadcrumb {
