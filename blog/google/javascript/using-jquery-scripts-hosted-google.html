@@ -1,103 +1,341 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 7]>
+<html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
 
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- TITLE OF SITE-->
+<title> PBDesk.com </title>
 
-  <title>Using jQuery Scripts hosted @ Google</title>
-  <meta name="description" content="As mentioned in my previous post, rather then hosting jQuery libraries on our sever we can directly use them from CDN services available from Microsoft &amp;...">
-   <meta name="author" content="">
-   
-  <link rel="stylesheet" href="/css/main.css">
-  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha256-Ucf/ylcKTNevYP6l7VNUhGLDRZPQs1+LsbbxuzMxUJM= sha512-FW2XqnqMwERwg0LplG7D64h8zA1BsxvxrDseWpHLq8Dg8kOBmLs19XNa9oAajN/ToJRRklfDJ398sOU+7LcjZA==" crossorigin="anonymous">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
-  <link rel="stylesheet" href="/assets/css/custom.css">
-  <link rel="canonical" href="http://yourdomain.com/blog/google/javascript/using-jquery-scripts-hosted-google">
-  <link rel="alternate" type="application/rss+xml" title="Pinal Bhatt's Blog" href="http://yourdomain.com/feed.xml">
-  
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
+<!-- META TAG -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CV, Portfolio, Resume">
+<meta name="author" content="Pinal Bhatt">
+
+<!-- FAVICON -->
+<link rel="icon" href="/assets/material/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/material/images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/material/images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/material/images/apple-icon-114x114.png">
+
+<!-- ========================================
+        Stylesheets
+==========================================-->
+
+<!-- MATERIALIZE CORE CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<link rel="stylesheet" href="/assets/material/css/animate.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,400italic,700 italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link href="/assets/material/css/style.css" rel="stylesheet">
+<link href="/assets/material/css/responsive.css" rel="stylesheet">
+
+<!-- COLORS: red lime purple orange green  -->
+<link rel="stylesheet" href="/assets/material/css/colors/red.css" title="lime">
+<link href="/css/main.css" rel="stylesheet">
+
+<!--[if lt IE 9]><script src="/assets/material/js/ie8-responsive-file-warning.js"></script><![endif] -->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
 </head>
+<body>
+<div class="container">
+    <div class="row">
+        <aside class="col l4 m12 s12 sidebar z-depth-1" id="sidebar">
+            <div class="row">
+                <div class="heading">
+    <!-- ======================================
+              IMAGE
+    =========================================-->
+    <div class="feature-img hide-on-med-and-down">
+        <a title="GoTo Home" href="/"><img src="/assets/material/images/profile-img.jpg" class="responsive-img" alt=""></a>
+    </div>
+    <!-- =========================================
+               NAVIGATION
+    ==========================================-->
+    <div class=" nav-icon">
+        <nav>
+            <div class="nav-wrapper">
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="/blog"><i class="fa fa-file-text-o"></i> My Posts</a></a></li>
+                    <li><a href="/gists"><i class="fa fa-file-code-o"></i> Gists</a></a></li>
+                    <li><a href="/ebooks"><i class="fa fa-book"></i> eBooks</a></a></li>
+                    <li><a href="tutorials"><i class="fa fa-laptop"></i> Tutorials</a></a></li>
+                    <li><a href="http://cv.PBDesk.com" target="_blank"><i class="fa fa-graduation-cap"></i> My Resume</a></a></li>
+                    <li><a href="/about"><i class="fa fa-user-secret"></i> About Me</a></a></li>
+                    <li><a href="about/contact-me"><i class="fa fa-send"></i> Contat Me</a></a></li>
+                    <li><a href="http://roken.pbdesk.com" target="_blank"><i class="fa fa-rocket"></i> RoKen</a></a></li>
+                    <li><a href="http://kenken.pbdesk.io" target="_blank"><i class="fa fa-th"></i> KenKen</a></a></li>
 
-
-  <body>
-
-        <div class="navbar navbar-default navbar-fixed-top topnav-border">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="/" class="navbar-brand">PBDesk.com</a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">This Site <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="themes">
-                <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-                <li class="divider"></li>
-                <li><a href="../cerulean/">My Posts</a></li>
-                <li><a href="../cosmo/">Gists</a></li>
-                <li><a href="../cyborg/">eBooks</a></li>
-                <li><a href="../darkly/">Tutorial</a></li>
-                  <li class="divider"></li>
-                  <li><a href="../darkly/">RSS</a></li>
-                  <li><a href="../darkly/">SiteMap</a></li>
-                  <li><a href="../darkly/"> Disclaimer</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">About <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="download">
-                <li><a href="http://jsfiddle.net/bootswatch/9y480qo5/"><i class="fa fa-user"></i> About Me</a></li>
-                  <li><a href="http://jsfiddle.net/bootswatch/9y480qo5/"><i class="fa fa-send"></i> Contact Me</a></li>
-                  <li><a href="http://jsfiddle.net/bootswatch/9y480qo5/"><i class="fa fa-graduation-cap"></i>  My Resume</a></li>
-                <li class="divider"></li>
-                <li class="menuHeadText">Follow Me</li>
-                <li><a href="./bootstrap.min.css"><i class="fa fa-facebook pull-right"></i>Facebook</a></li>
-                  <li><a href="./bootstrap.min.css"><i class="fa fa-twitter pull-right"></i> Twitter</a></li>
-                  <li><a href="./bootstrap.min.css"><i class="fa fa-linkedin pull-right"></i> LinkedIN</a></li>
-                  <li><a href="./bootstrap.min.css"><i class="fa fa-google-plus pull-right"></i> Google+</a></li>
-                  <li><a href="./bootstrap.min.css"><i class="fa fa-github pull-right"></i> Github</a></li>
-
-                <li class="divider"></li>
-                  <li class="menuHeadText">My Other Sites</li>
-                <li><a href="./variables.less">RoKen</a></li>
-                <li><a href="./bootswatch.less">KenKen</a></li>
-              </ul>
-            </li>
-          </ul>
-
-        </div>
-      </div>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse  "><i class="mdi-navigation-menu"></i></a>
+            </div>
+        </nav>
+    </div>
+    <!-- ========================================
+               NAME AND TAGLINE
+    ==========================================-->
+    <div class="title col s12 m12 l9 right  wow fadeIn hide-on-med-and-down" data-wow-delay="0.1s">
+        <h2>Pinal Bhatt's Blog</h2> <!-- title name -->
+        <h5>Learning endeavor for ever...</h5>  <!-- tagline -->
     </div>
 
+    <div class="col l12 m12 s12  mobile sidebar-item hide-on-large-only">
+        <div class="row">
+            <div class="col m12 s12 l12 info wow fadeIn a2" style="border-bottom: none !important;" data-wow-delay="0.2s" >
+                <div class="section-item-details" style="padding-top: 15px">
+                    <div class="aboutMe">
+                        <h4><a title="GoTo Home" href="/">Pinal Bhatt's Blog</a></h4>
+                        <span>Learning endeavor for ever... </span>
+                    </div>
+                    <div class="work">
+    <div class="social1">
+        <a target="_blank"  href="http://twitter.com/PBDesk">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <a target="_blank"  href="https://www.facebook.com/Go.PBDesk">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a target="_blank"  href="https://plus.google.com/+Pbdesk">
+            <i class="fa fa-google-plus"></i>
+        </a>
+        <a target="_blank"  href="http://www.linkedin.com/in/pinalbhatt">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a target="_blank"  href="https://github.com/PBDesk">
+            <i class="fa fa-github"></i>
+        </a>
+        <a target="_blank"  href="/rss.xml">
+            <i class="fa fa-rss"></i>
+        </a>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="col l12 m12 s12  mobile sidebar-item hide-on-med-and-down">
+    <div class="row">
+
+        <div class="col m12 s12 l12 offset-s1 offset-m1  offset-l1  wow fadeIn a2" data-wow-delay="0.2s" >
+            <div class="section-item-details">
+                <div class="aboutMe">
+                    <h4><a href="/about">Pinal Bhatt</a></h4> <!-- Number -->
+                    <span>Software Engineer <br/><i>always on learning ramp</i></span>
+                </div>
+                <div class="work">
+    <div class="social1">
+        <a target="_blank"  href="http://twitter.com/PBDesk">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <a target="_blank"  href="https://www.facebook.com/Go.PBDesk">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a target="_blank"  href="https://plus.google.com/+Pbdesk">
+            <i class="fa fa-google-plus"></i>
+        </a>
+        <a target="_blank"  href="http://www.linkedin.com/in/pinalbhatt">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a target="_blank"  href="https://github.com/PBDesk">
+            <i class="fa fa-github"></i>
+        </a>
+        <a target="_blank"  href="/rss.xml">
+            <i class="fa fa-rss"></i>
+        </a>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="col l12 m12 s12 sidebar-item hide-on-med-and-down">
+    <div class="row">
+        <div class="col m12 s12 l3 icon">
+            <i class="fa fa-file-text-o"></i> <!-- icon -->
+        </div>
+        <div class="col m12 s12 l9 info wow fadeIn a2" data-wow-delay="0.2s" style="border-bottom: none !important;" >
+            <div class="section-item-details">
+                <div class="personal">
+                    <h4><a href="/blog">My Posts</a></h4> <!-- Number -->
+                </div>
+            </div>
+        </div>
+        <div class="col m12 s12 l3 icon">
+            <i class="fa fa-file-code-o"></i> <!-- icon -->
+        </div>
+        <div class="col m12 s12 l9 info wow fadeIn a2" data-wow-delay="0.2s"  style="border-bottom: none !important;">
+            <div class="section-item-details">
+                <div class="personal">
+                    <h4><a href="/gists">Gists</a></h4> <!-- Number -->
+                </div>
+            </div>
+        </div>
+        <div class="col m12 s12 l3 icon">
+            <i class="fa fa-book"></i> <!-- icon -->
+        </div>
+        <div class="col m12 s12 l9 info wow fadeIn a2" data-wow-delay="0.2s"  style="border-bottom: none !important;">
+            <div class="section-item-details">
+                <div class="personal">
+                    <h4><a href="/ebooks">eBooks</a></h4> <!-- Number -->
+                </div>
+            </div>
+        </div>
+        <div class="col m12 s12 l3 icon">
+            <i class="fa fa-laptop"></i> <!-- icon -->
+        </div>
+        <div class="col m12 s12 l9 info wow fadeIn a2" data-wow-delay="0.2s" >
+            <div class="section-item-details">
+                <div class="personal">
+                    <h4><a href="/tutorials">Tutorials</a></h4> <!-- Number -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="col l12 m12 s12  sidebar-item hide-on-med-and-down">
+    <div class="row">
+        <div class="col m12 s12 l3 icon">
+            <i class="fa fa-user"></i> <!-- icon -->
+        </div>
+        <div class="col m12 s12 l9 info wow fadeIn a2" data-wow-delay="0.2s" style="border-bottom: none !important;" >
+            <div class="section-item-details">
+                <div class="personal">
+                    <h4><a href="/about">About Me</a></h4> <!-- Number -->
+                </div>
+            </div>
+        </div>
+        <div class="col m12 s12 l3 icon">
+            <i class="fa fa-send"></i> <!-- icon -->
+        </div>
+        <div class="col m12 s12 l9 info wow fadeIn a2" data-wow-delay="0.2s"  style="border-bottom: none !important;">
+            <div class="section-item-details">
+                <div class="personal">
+                    <h4><a href="/about/contact-me">Contact Me</a></h4> <!-- Number -->
+                </div>
+            </div>
+        </div>
+        <div class="col m12 s12 l3 icon">
+            <i class="fa fa-rss-square"></i> <!-- icon -->
+        </div>
+        <div class="col m12 s12 l9 info wow fadeIn a2" data-wow-delay="0.2s" >
+            <div class="section-item-details">
+                <div class="personal">
+                    <h4><a href="/rss">Subscribe Rss</a></h4> <!-- Number -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                <!-- SKILLS -->
+                <div class="col l12 m12 s12  skills sidebar-item sidebar-item hide-on-med-and-down" >
+                    <div class="row">
+                        <div class="col m12 l3 s12 icon">
+                            <i class="fa fa-calendar-o"></i> <!-- icon -->
+                        </div>
+                        <!-- Skills -->
+                        <div class="col m12 l9 s12 skill-line a5 wow fadeIn" data-wow-delay="0.5s">
+                            <h3>Featured </h3>
+                            
+                            
+
+                        </div>
+                    </div>
+                </div>
 
 
-        <div class="container">
+            </div>
+            <div class="row">
+                <div class="col l12 m12 s12 hide-on-med-and-down" style="background-color: #fff">
+                    <!-- 120x240, created 12/19/07 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:120px;height:240px"
+     data-ad-client="ca-pub-4686631795727964"
+     data-ad-slot="9327659222"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l12 m12 s12 hide-on-med-and-down" style="background-color: #fff">
+                    <!-- 120x240, created 12/19/07 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:120px;height:240px"
+     data-ad-client="ca-pub-4686631795727964"
+     data-ad-slot="9327659222"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                </div>
+            </div>
+        </aside>
+        <section class="col s12 m12 l8 section">
+            <div class="row">
+                <div class="section-wrapper z-depth-1">
+  <div class="custom-content col s12 m12 l12 wow fadeIn a1 breadcrumbDiv" data-wow-delay="0.1s" >
 
-      
+    <div class="col s12 ">
+      <a href="#!" class="breadcrumb">Home</a>
+      <a href="#!" class="breadcrumb">Second</a>
+      <div  class="breadcrumb">SiteMap</div>
+    </div>
 
-      <div class="row">
-          
-          
+  </div>
+  <div class="section-icon col s12 m12 l2 hide-on-med-and-down">
+    <i class="fa fa-file-text-o"></i>
+  </div>
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-        <div class="col-sm-8 blog-main">
-            
-          
 
-            <div class="page-content">
-                <div class="wrapper">
-                    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s" >
+      <div class="post-meta-cat"><span><a class="a-c" href="/tag/blog">blog</a> </span><span><a class="a-c" href="/tag/Google">Google</a> </span><span><a class="a-c" href="/tag/JavaScript">JavaScript</a> </span></div>
+    <h2 style="margin-top:10px">Using jQuery Scripts hosted @ Google </h2>
+
+    <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s" >
+      <span><time datetime="2010-12-07T14:54:00-05:00" itemprop="datePublished">Dec 7, 2010</time> </span>
+        <div class="post-meta-tag"><i class="fa fa-tags"></i> </div>
+    </div>
+    <div class="custom-content-wrapper wow fadeIn a3" data-wow-delay="0.3s" >
+
+        <p>As mentioned in my previous <a href="http://blog.pbdesk.com/2010/12/using-cdn-hosted-jquery-library.html">post</a>, rather then hosting jQuery libraries on our sever we can directly use them from CDN services available from Microsoft &amp; Google. And there are various advantages of using this. In this article we will see on how to use jQuery library hosted at Google. </p>
+<p>Google hosts following popular, open-source JavaScript libraries at its API's library (ajax.googleapis.com): Chrome Frame, Dojo, Ext Core, jQuery, jQuery UI, MooTools, Prototype, script.aculo.us,SWFObject, Yahoo! User Interface Library (YUI),WebFont Loader. For more details about the usage and the versions available please visit:</p>
+<p>&#160; <a href="http://code.google.com/apis/libraries/devguide.html">http://code.google.com/apis/libraries/devguide.html</a></p>
+<p>You can access there libraries directly via url, you don't need API key if you are not using Google Libraries' APIs.&#160; </p>
+<p>Below are some other links that may be useful :</p>
+<h2>Related Links</h2>
+<ul>
+<li><a href="http://code.google.com/apis/libraries/devguide.html" target="_blank">Google Libraries API - Developer's Guide</a> </li>
+<li><a href="http://webmuch.com/how-why-you-should-use-google-cdn/" target="_blank">How &amp; why you should use Google CDN</a> </li>
+<li><a href="http://stackoverflow.com/questions/1447184/microsoft-cdn-for-jquery-or-google-cdn" target="_blank">Microsoft CDN for JQuery or Google CDN?</a> </li>
+<li><a href="http://scriptsrc.net/">http://scriptsrc.net/</a></li>
+</ul>
+
+    </div>
+
+  </div>
+    </article>
+</div>
+
+<section class="col s12 m12 l8 section">
+  <div class="row">
+
+  </div>
+</section>
+<!--<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header" data-spy="affix" data-offset-top="25">
     <h1 class="post-title"  itemprop="name headline">Using jQuery Scripts hosted @ Google</h1>
@@ -122,133 +360,66 @@
 
   </div>
 
-</article>
+</article>-->
 
-                </div>
-            </div>
-
-          <nav>
-            <ul class="pager">
-              <li><a href="#">Previous</a></li>
-              <li><a href="#">Next</a></li>
-            </ul>
-          </nav>
-
-        </div><!-- /.blog-main -->
-
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-            <h4>About</h4>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-          </div>
-          <div class="sidebar-module">
-            <h4>Archives</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">March 2014</a></li>
-              <li><a href="#">February 2014</a></li>
-              <li><a href="#">January 2014</a></li>
-              <li><a href="#">December 2013</a></li>
-              <li><a href="#">November 2013</a></li>
-              <li><a href="#">October 2013</a></li>
-              <li><a href="#">September 2013</a></li>
-              <li><a href="#">August 2013</a></li>
-              <li><a href="#">July 2013</a></li>
-              <li><a href="#">June 2013</a></li>
-              <li><a href="#">May 2013</a></li>
-              <li><a href="#">April 2013</a></li>
-            </ol>
-          </div>
-          <div class="sidebar-module">
-            <h4>Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
-            </ol>
-          </div>
-        </div><!-- /.blog-sidebar -->
-
-      </div><!-- /.row -->
-
-    </div><!-- /.container -->
-  
-   
-    <div class="row">
-    <div class="container">
-        <div class="AdPlace hidden-xs hidden-sm">
-            <!-- Ad 728x90 -->
+                <div class="section-wrapper z-depth-1 wow fadeIn" style="max-height: 300px" data-wow-delay="0.1s">
+    <div class="col s12 m12 l12 website right" >
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <!-- PBDesk2016-Responsive1 -->
 <ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
+     style="display:block"
      data-ad-client="ca-pub-4686631795727964"
-     data-ad-slot="7078321947"></ins>
+     data-ad-slot="5279982745"
+     data-ad-format="auto"></ins>
 <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-        </div>
-    </div>
-
-</div>
-<div class="foot">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="padd">
-                    <div class="widget"><h3>Learning endeavor for ever…</h3>
-                        <p class="jtxt">Welcome to My Blog! On this site you'll find interesting posts,
-                            articles, tutorials, news updates and links on Microsoft.Net, ASP.NET, MVC, WebAPIs, C#,
-                            Windows8, Metro Apps, WCF, XAML, JavaScript, jQuery, AngularJS, NodeJS, Social Media,
-                            Mobiles, Science &amp; Technology and other random thoughts and opinions.</p>
-                        <p class="pull-right"><i>- Pinal Bhatt</i></p>
-
-                    </div>
-                </div>
             </div>
-            <div class="col-md-4">
-                <div class="padd">
-                    <h3>About Me</h3>
-                    <div class="staff">
-                        <div class="">
-                            <a href="#">
-                            <img class="footer-logo img-responsive img-rounded"
-                                                 src="/assets/images/logo/PBDesk/PBDesk.png" alt="PBDesk Logo">
-                            </a>
-                        </div>
-                        <p class="ctxt" style="padding: 10px; font-style: italic">software engineer<br/> and<br/> always on learning ramp</p>
 
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="padd">
-                    <div class="widget"><h3>My Sites & Apps</h3>
-                        <ul style="list-style: none;">
-                            <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-                            <li><a href="/feed.xml"><i class="fa fa-rss"></i> RSS</a></li>
-                            <li><a href="/SiteMap" target="_blank"><i class="fa fa-sitemap"></i> SiteMap</a></li>
-                            <li><a href="/Disclaimer"><i class="fa fa-warning"></i> Disclaimer</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
-<footer>
-    <div class="container">
+                <div class="section-wrapper z-depth-1 wow fadeIn" data-wow-delay="0.1s">
+    <div class="col s12 m12 l10 website right" >
         <div class="row">
-            <div class="col-md-12">
+            <div class="col s12 m12 l12">
+                <footer>
+                <!--<span><a class="a-c" href="/">Home</a></span> | <span><a href="">SiteMap</a></span> | <span><a href="">Disclaimer</a></span>-->
+                    <ul id="footer-menu">
+                        <li><a href="/"> Home</a></li>
+                        <li><a href="/about/SiteMap"> SiteMap</a></li>
+                        <li><a href="/about/Disclaimer"> Disclaimer</a></li>
+                    </ul>
                 <div class="fpadd">Pinal Bhatt's Blog © 2016 | PBDesk.com</div>
                 <div class="fpadd">Concept Design, Develop & Perceived by Pinal Bhatt.</div>
+                </footer>
             </div>
+
         </div>
-        <div class="clearfix"></div>
     </div>
-</footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+</div>
+            </div>
+        </section>
+    </div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js'></script>
+<script src="/assets/material/js/wow.min.js"></script>
+<script src="/assets/material/js/masonry.pkgd.js"></script>
+<script src="/assets/material/js/validator.min.js"></script>
+<script src="/assets/material/js/init.js"></script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  </body>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+    ga('create', 'UA-9753249-7', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
 </html>
+

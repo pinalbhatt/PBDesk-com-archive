@@ -6,12 +6,12 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 10 Feb 2016 21:22:28 -0500</pubDate>
-    <lastBuildDate>Wed, 10 Feb 2016 21:22:28 -0500</lastBuildDate>
+    <pubDate>Mon, 28 Mar 2016 21:43:38 -0400</pubDate>
+    <lastBuildDate>Mon, 28 Mar 2016 21:43:38 -0400</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
+        <title>Welcome to Gists</title>
         <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
@@ -31,13 +31,18 @@ This is a test gist.&lt;/pre&gt;&lt;/noscript&gt;
 
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
 
+&lt;script src=&quot;https://gist.github.com/pinalbhatt/d7cb74b2ecdb0cbc9705.js&quot;&gt;&lt;/script&gt;
+
+&lt;p data-height=&quot;268&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;EPrEqR&quot; data-default-tab=&quot;js&quot; data-user=&quot;pinalbhatt&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/pinalbhatt/pen/EPrEqR/&quot;&gt;EPrEqR&lt;/a&gt; by Pinal Bhatt (&lt;a href=&quot;http://codepen.io/pinalbhatt&quot;&gt;@pinalbhatt&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
 </description>
         <pubDate>Thu, 04 Feb 2016 20:59:21 -0500</pubDate>
-        <link>http://yourdomain.com/blog/jekyll/update/welcome-to-jekyll</link>
-        <guid isPermaLink="true">http://yourdomain.com/blog/jekyll/update/welcome-to-jekyll</guid>
+        <link>http://yourdomain.com/gists/jekyll/update/welcome-to-jekyll</link>
+        <guid isPermaLink="true">http://yourdomain.com/gists/jekyll/update/welcome-to-jekyll</guid>
         
         
-        <category>blog</category>
+        <category>gists</category>
         
         <category>jekyll</category>
         
@@ -68,9 +73,11 @@ This is a test gist.&lt;/pre&gt;&lt;/noscript&gt;
 
 </description>
         <pubDate>Thu, 04 Feb 2016 20:59:21 -0500</pubDate>
-        <link>http://yourdomain.com/jekyll/update/welcome-to-jekyll</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/welcome-to-jekyll</guid>
+        <link>http://yourdomain.com/blog/jekyll/update/welcome-to-jekyll</link>
+        <guid isPermaLink="true">http://yourdomain.com/blog/jekyll/update/welcome-to-jekyll</guid>
         
+        
+        <category>blog</category>
         
         <category>jekyll</category>
         
